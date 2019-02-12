@@ -1,0 +1,25 @@
+
+/*---------------------------------
+ *  Carousel > Demo #2
+ *---------------------------------*/
+.carousel-demo2{width:1000px;height:208px;}
+
+/* Navbar */
+.carousel-demo2 .sliderkit-nav{left:0;bottom:0;background:#ccc; }
+.carousel-demo2 .sliderkit-nav-clip ul li{float:left;margin:0 32px 0 0;}
+.carousel-demo2 .sliderkit-nav-clip ul li a{display:block;width:312px;height:208px;overflow:hidden;margin:0; border:0px solid red; font-size:67px; color:white; }
+.carousel-demo2 .sliderkit-nav-clip ul li a:hover{opacity:0.8;}
+
+/* Navbar buttons */
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-btn{position:absolute;top:0; border:0px dotted green;background:#333; opacity:0.5;}
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-btn span{display:none;}
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-btn a{display:block;width:40px;height:209px;}
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-prev{left:0;}
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-next{right:0px;}
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-prev a{background:url(../img/new_arrow1.png) no-repeat 50% 50%;}
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-next a{background:url(../img/new_arrow2.png) no-repeat 50% 50%;}
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-prev a:hover{background:url(../img/new_arrow1_ov.png) no-repeat 50% 50%;}
+.carousel-demo2 .sliderkit-nav .sliderkit-nav-next a:hover{background:url(../img/new_arrow2_ov.png) no-repeat 50% 50%;}
+
+/* Buttons > Disable */
+.carousel-demo2 .sliderkit-nav .sliderkit-btn-disable{opacity:0.3/*can be set to any value until 1*/;cursor:default;}

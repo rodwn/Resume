@@ -1,0 +1,196 @@
+html, button, input, select, textarea { color:#222; }
+body,h1,h2,h3,h4,h5,h6 { font-size:100%; line-height:1.2; font-family:'돋움', dotum, Helvetica, sans-serif; }
+
+textarea { resize:vertical; }
+.blind, legend, caption { display:block; overflow:hidden; position:absolute; top:0; left:-1000em; }
+i, em, address { font-style:normal; font-weight:normal; }
+
+.ir { background-color:transparent; border:0; overflow: hidden; *text-indent:-9999px; }
+.ir:before { content:""; display: block; width:0; height:150%; }
+
+.hidden { display:none !important; visibility:hidden; }
+.invisible { visibility:hidden; }
+
+.clearfix:before, .clearfix:after { content:" "; display:table; }
+.clearfix:after { clear:both; }
+
+.clearfix { *zoom:1; }
+
+@media only screen and (max-width:768px) {
+}
+
+@media print {
+  * { background:transparent !important; color:#000 !important; box-shadow:none !important; text-shadow:none !important; }
+  a { text-decoration: underline; }
+
+  .ir a:after,  a[href^="javascript:"]:after, a[href^="#"]:after { content:""; }
+  tr,  img { page-break-inside:avoid; }
+  img { max-width:100% !important; }
+
+  @page {
+    margin:0.5cm;
+  }
+  p,  h2,  h3 { orphans:3; widows:3; }
+  h2,  h3 { page-break-after:avoid; }
+}
+
+@charset "UTF-8";
+
+			@font-face{
+			font-family:KozGoPro-Medium;
+			src:url('../font/KozGoPro-Medium.woff');
+			src:local(※), 
+				url('../font/KozGoPro-Medium.woff') format('woff');
+			}
+			@font-face{
+			font-family:NanumGothic;
+			src:url('../font/NanumGothic.woff');
+			src:local(※), 
+				url('../font/NanumGothic.woff') format('woff');
+			}
+			
+			@font-face{
+			font-family:AdobeGothicStd-Bold;
+			src:url('../font/AdobeGothicStd-Bold.woff');
+			src:local(※), 
+				url('../font/AdobeGothicStd-Bold.woff') format('woff');
+			}
+			
+			@font-face{
+			font-family:MyriadBold_0;
+			src:url('../font/MyriadBold_0.woff');
+			src:local(※), 
+				url('../font/MyriadBold_0.woff') format('woff');
+			}
+			
+			@font-face{
+			font-family:impact_0;
+			src:url('../font/impact_0.woff');
+			src:local(※), 
+				url('../font/impact_0.woff') format('woff');
+			}
+
+			
+			
+			
+			
+
+#content {
+			width:1000px;
+			height:2600px;
+			margin:0 auto;
+			position:relative;
+			
+}
+
+#header-wrap #inner ul#navigation li.promotion a{
+			background:url(../images/common/promotion_ov.png)no-repeat;
+}
+
+#content h2.title{
+			border:0px solid black;
+			padding-top:97px;
+			margin-bottom:20px;
+			}
+
+															/* path    */
+
+#content .path{
+			border:0px solid red;	
+			float:left;			
+			margin-left:742px;	
+}
+
+#content .path li {
+			float:left;
+			border:0px solid cyan;
+			margin-top:49px;
+			
+}
+#content .path li.home{
+			padding-right:20px;
+			background:url(../images/brand/path_arrow.png) no-repeat right 50%;
+			margin-right:11px;
+			font-size:12px;
+			text-transform:uppercase;
+			letter-spacing:1px;
+}
+
+#content .path li.home a{
+			color:#333;
+}
+
+#content .path li.promotion{
+			padding-right:19px;
+			background:url(../images/brand/path_arrow.png) no-repeat right 50%;
+			margin-right:8px;
+			color:#333;
+			font-size:12px;
+			text-transform:uppercase;
+			letter-spacing:1px;
+}
+#content #select  {
+			border:0px solid purple;			
+			position:absolute;
+			right:0;
+			top:27px;
+
+}							
+									/*  visual  */
+							
+#content #promotion_visual {
+			background:url(../images/promotion/visual.png) no-repeat;
+			border:0px solid blue;	
+			width:100%;
+			height:562px;
+			margin-top:25px;
+			margin-bottom:90px;
+	}
+	
+#content #promotion_visual p.btn{
+			padding-top:475px;
+			padding-left:398px;
+}
+
+									/*  banner  */
+
+#content .navi {
+			border:0px solid magenta;
+			position:relative;
+			margin-bottom:24px;
+}
+
+#content .navi li.end {
+			position:absolute;
+			left:145px;
+			top:0;
+}
+				
+	#content .navi li.end:hover {			
+			opacity:0.5;
+	}
+				
+
+#content #banners {
+			border:0px solid purple;
+}
+				
+#content #banners li{				
+			margin-bottom:20px;
+}
+#content #banners li:hover{
+border:1px solid white;}
+ 
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+												
+

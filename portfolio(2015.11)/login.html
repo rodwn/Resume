@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<title>THE NORTH FACE</title>
+
+<meta name="viewport" content="user-scalable=yes, initial-scale = 1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" /> 
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/login.css">
+<LINK REL="SHORTCUT ICON" HREF="./images/favicon.ico" /> 
+
+				<!--- hot keyword ------------>
+
+<script type="text/javascript" src="./JQ/keyword/demo_files/jquery.js"></script>
+<script type="text/javascript" src="./JQ/keyword/demo_files/jquery.vticker-min.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+        $('#hot_keyword').vTicker({
+		speed: 700,
+		pause: 4000,
+		animation: 'fade',
+		mousePause: true,
+		showItems: 1
+	});
+});
+</script>
+				<!-- select j커리 ---------->
+<link rel="stylesheet" href="./JQ/select/css/style.css">
+
+<script src="./JQ/select/js/js/jquery.select.js"></script>
+
+
+
+
+
+</head>
+
+<body>
+  
+	<div id="header">
+		<div id="inner">	<!-- inner-->
+			<div id="hot_keyword">
+				<ul>
+					<li><span>1</span><a href="#">화이트라벨</a><img src="./images/common/up.png" /></li>
+					<li><span>2</span><a href="#">바람막이</a><img src="./images/common/down.png" /></li>
+					<li><span>3</span><a href="#">히말라얀LTD</a><img src="./images/common/up.png" /></li>
+					<li><span>4</span><a href="#">패딩조끼</a><img src="./images/common/up.png" /></li>
+					<li><span>5</span><a href="#">이월상품</a><img src="./images/common/down.png" /></li>
+					<li><span>6</span><a href="#">다이내믹 하이킹</a><img src="./images/common/up.png" /></li>
+					<li><span>7</span><a href="#">VX</a><img src="./images/common/up.png" /></li>
+					<li><span>8</span><a href="#">키즈 용품</a><img src="./images/common/down.png" /></li>
+					<li><span>9</span><a href="#">등산화</a><img src="./images/common/up.png" /></li>
+					<li><span class="last">10</span><a href="#">백 팩</a><img src="./images/common/up.png" /></li>
+				</ul>
+			</div>	 
+						
+		
+			
+			
+			<ul id="infomenu">
+				<li><a href="login.html">로그인</a></li>
+				<li><a href="join.html">회원가입</a></li>
+				<li><a href="#">주문조회</a></li>
+				<li><a href="#">고객센터</a></li>
+				<li><a href="#">VIP</a></li>
+				<li class="last">
+				<select id="lang" name="lang">	
+					<option value="" selected>English</option>
+					<option value="">한국어</option>
+					<option value="">Chinese</option>
+					<option value="">Japanese</option>
+				</select>
+				
+				</li>
+			</ul>
+			
+			<script type="text/javascript">
+ <!--
+	 $(document).ready(function(){    
+	   var options = {};
+	   options['width'] = 70; //가로길이
+	   options['height'] = 13; //세로길이
+	   options['border'] = "1px #333 solid"; //보더 스타일
+	   options['listOverColor'] = "#999"; //리스트 bg
+	   options['backgroundimage'] = "./JQ/select/img/path_bg.png";//
+	   
+	   $("#lang").selectboxeffect(options);
+	
+
+});
+ //-->
+ </script>
+	</div>
+</div>				
+
+
+
+	
+	<div id="content">
+	
+		<h3 class="logo"><a href="index.html"><img src="./images/login/logo.png" /></a></h3>
+
+		<form action="#" method="post">
+		  <div class="login"> 
+		    <fieldset>
+			
+				<label for="logID" class="id">
+				<input type="text" value="" placeholder="아이디" maxlength="25" id="logID" /></label>
+				
+				<label for="logPW" class="password">
+				<input type="password" value="" placeholder="비밀번호" maxlength="25" id="logPW" /></label>
+				
+				<input type="checkbox" id="remember_id" style="width:14px; height:14px;">
+				
+				<p class="remember">아이디 저장</p>
+				
+				<input type="image" title="로그인" src="./images/login/btn.png"  onclick="info()" id="login_btn" />
+				
+				<ul>
+					<li class="find">아이디 또는 비밀번호를 잊으셨나요?</li>
+					<li class="join">처음이세요?</li>
+				</ul>
+				
+				<input type="image" title="아이디찾기" src="./images/login/find_id.png"  onclick="info()" id="find_id" />
+				<input type="image" title="비밀번호 찾기" src="./images/login/find_pw.png"  onclick="info()" id="find_pw" />
+				<a href="join.html" class="joinbtn"><span>회원가입</span></a>
+			</fieldset>
+		</div>
+
+		</form>
+		
+		<div id="notice">
+				<h4 class="img"><img src="./images/login/notice.png" /></h4>
+				<h3 class="gothic"><img src="./images/login/gothic.png" /></h3>
+				<p>기존 영원아웃도어 멤버십 회원님들께서는 <span>더 드림 멤버십 회원으로 전환</span>하셔야<br /> 
+온라인 스토어를 정상적으로 이용하실 수 있습니다.</p>
+				<p>더 드림 멤버십 회원으로 가입하시면 동일한 아이디와 비밀번호로 영원아웃도어<br />
+온라인 스토어와 노스페이스 온라인 스토어를 함께 이용하실 수 있습니다.</p>
+				<h6><a href="#" title="more"><img src="./images/login/more.png" /></a></h6>
+				
+
+			</div>
+	</div>
+  
+  <div id="footer">
+			<ul>
+				<li><a href="#"><img src="./images/login/term.png" /></a></li>
+				<li><a href="#"><img src="./images/login/privacy.png" /></a></li>
+				<li><a href="#"><img src="./images/login/sitemap.png" /></a></li>
+				<li class="last"><a href="#"><img src="./images/login/membership.png" /></a></li>
+			</ul>
+  </div>
+			
+</body>
+</html>

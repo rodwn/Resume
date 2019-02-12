@@ -1,0 +1,258 @@
+html, button, input, select, textarea { color:#222; }
+body,h1,h2,h3,h4,h5,h6 { font-size:100%; line-height:1.2; font-family:'돋움', dotum, Helvetica, sans-serif; text-transform:uppercase; }
+
+textarea { resize:vertical; }
+.blind, legend, caption { display:block; overflow:hidden; position:absolute; top:0; left:-1000em; }
+i, em, address { font-style:normal; font-weight:normal; }
+
+.ir { background-color:transparent; border:0; overflow: hidden; *text-indent:-9999px; }
+.ir:before { content:""; display: block; width:0; height:150%; }
+
+.hidden { display:none !important; visibility:hidden; }
+.invisible { visibility:hidden; }
+
+.clearfix:before, .clearfix:after { content:" "; display:table; }
+.clearfix:after { clear:both; }
+
+.clearfix { *zoom:1; }
+
+@media only screen and (max-width:768px) {
+}
+
+@media print {
+  * { background:transparent !important; color:#000 !important; box-shadow:none !important; text-shadow:none !important; }
+  a { text-decoration: underline; }
+
+  .ir a:after,  a[href^="javascript:"]:after, a[href^="#"]:after { content:""; }
+  tr,  img { page-break-inside:avoid; }
+  img { max-width:100% !important; }
+
+  @page {
+    margin:0.5cm;
+  }
+  p,  h2,  h3 { orphans:3; widows:3; }
+  h2,  h3 { page-break-after:avoid; }
+}
+
+@charset "UTF-8";
+
+			@font-face{
+			font-family:NanumGothic;
+			src:url('../font/NanumGothic.woff');
+			src:local(※), 
+				url('../font/NanumGothic.woff') format('woff');
+			}
+			
+			@font-face{
+			font-family:MyriadBold_0;
+			src:url('../font/MyriadBold_0.woff');
+			src:local(※), 
+				url('../font/MyriadBold_0.woff') format('woff');
+			}
+			
+			@font-face{
+			font-family:impact_0;
+			src:url('../font/impact_0.woff');
+			src:local(※), 
+				url('../font/impact_0.woff') format('woff');
+			}
+			
+			@font-face{
+			font-family:axis;
+			src:url('../font/axis.woff');
+			src:local(※), 
+				url('../font/axis.woff') format('woff');
+			}
+			
+			
+			
+			
+
+#content {
+			width:1000px;
+			height:1720px;
+			margin:0 auto;
+			position:relative;
+}
+
+
+
+#content h2.title{
+			border:0px solid black;
+			padding-top:97px;
+			margin-bottom:20px;
+			
+			}
+
+															/* path    */
+
+#content .path{
+			border:0px solid red;
+			float:left;			
+			margin-left:777px;
+			
+}
+
+#content .path li {
+			float:left;
+			border:0px solid cyan;
+			margin-top:48px;
+}
+#content .path li.home{
+			padding-right:20px;
+			background:url(../images/brand/path_arrow.png) no-repeat right 2px;
+			margin-right:11px;
+			font-size:12px;
+			text-transform:uppercase;
+			letter-spacing:1px;
+}
+
+#content .path li.home a{
+			color:#333;
+}
+
+#content .path li.shop{
+			padding-right:20px;
+			background:url(../images/brand/path_arrow.png) no-repeat right 2px;
+			margin-right:6px;
+			color:#333;
+			font-size:12px;
+			text-transform:uppercase;
+			letter-spacing:1px;
+}
+
+#content #select  {
+			border:0px solid purple;			
+			position:absolute;
+			right:0;
+			top:26px;
+			
+			
+}						
+
+   /* ---------------------------------search 폼  -------------*/						
+   
+  #content h3.search_title{	
+			font-family:NanumGothic;
+			font-size:16px;
+			color:#666;
+			border:0px solid blue;
+			margin-top:40px;
+  }
+  
+  #content #search{
+			border:1px solid #ccc;
+			padding:23px 0 0 23px;
+			margin-top:24px;
+			font-size:12px;
+  }
+  
+#content #search h3.region{  
+			margin-bottom:12px;
+}
+
+#content #search select.region1{
+			border:1px solid #ccc;
+			width:200px;
+			height:30px;
+			margin-right:39px;
+			color:#666;
+			padding-left:5px;
+}
+
+
+#content #search select.region2{
+			border:1px solid #ccc;
+			width:200px;
+			height:30px;
+			color:#666;
+			padding-left:5px;
+}
+
+#content #search p{
+			float:right;
+			border:0px solid green;
+			margin-right:392px;
+}
+
+#content #search h3.store{  
+			margin-top:36px;
+			margin-bottom:16px;
+}
+
+#content #search input#storename{
+			padding-left:10px;
+			margin-bottom:36px;
+}
+input[type=text]{color:#333;}
+input[type=text]::-webkit-input-placeholder{color:#999;}
+input[type=text]::-moz-placeholder{color:#999;}
+
+				/*  --------------------------- 매장 table ---------------------*/
+				
+	
+table{
+			background:#eee;
+			margin-top:54px;	
+}
+
+	
+table tr td{
+			width:50%;
+			border:0px solid red;
+			}
+table tr td dl{			
+			border:0px solid cyan;
+			margin-top:24px;
+}
+
+table tr td dl dt{						
+			
+			padding-left:308px;
+			padding-top:27px;
+			border:0px solid black;
+}
+
+table tr td dl dd.image{			
+			float:left;
+}
+			
+table tr td dl dd.address{
+			
+			font-family:NanumGothic;
+			font-size:12px;
+			color:#333;
+			border:0px solid orange;
+			padding-left:308px;
+			padding-top:8px;
+			line-height:1.6;
+}
+table tr td dl dd.btn{
+			padding-left:308px;
+			padding-top:28px;			
+}
+table tr th.more{
+			background:url(../images/shop/more.png) no-repeat 0 0;
+			font-family:NanumGothic;
+			font-size:18px;
+			height:45px;
+			padding-top:11px;
+			
+			
+	}
+	
+	
+table tr th.more a{
+			color:white;
+			border:0px solid pink;
+			padding:11px 460px 12px 460px;
+}
+table tr th.more a:hover{
+			color:#ccc;
+}
+
+table tr td.last{
+			padding-bottom:56px;
+}
+
+

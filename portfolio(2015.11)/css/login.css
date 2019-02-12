@@ -1,0 +1,309 @@
+html, button, input, select, textarea { color:#222; }
+body,h1,h2,h3,h4,h5,h6 { font-size:100%; line-height:1.2; font-family:'돋움', dotum, Helvetica, sans-serif; }
+
+textarea { resize:vertical; }
+.blind, legend, hr, caption { display:block; overflow:hidden; position:absolute; top:0; left:-1000em; }
+i, em, address { font-style:normal; font-weight:normal; }
+
+.ir { background-color:transparent; border:0; overflow: hidden; *text-indent:-9999px; }
+.ir:before { content:""; display: block; width:0; height:150%; }
+
+.hidden { display:none !important; visibility:hidden; }
+.invisible { visibility:hidden; }
+
+.clearfix:before, .clearfix:after { content:" "; display:table; }
+.clearfix:after { clear:both; }
+
+.clearfix { *zoom:1; }
+
+@media only screen and (max-width:768px) {
+}
+
+@media print {
+  * { background:transparent !important; color:#000 !important; box-shadow:none !important; text-shadow:none !important; }
+  a { text-decoration: underline; }
+
+  .ir a:after,  a[href^="javascript:"]:after, a[href^="#"]:after { content:""; }
+  tr,  img { page-break-inside:avoid; }
+  img { max-width:100% !important; }
+
+  @page {
+    margin:0.5cm;
+  }
+  p,  h2,  h3 { orphans:3; widows:3; }
+  h2,  h3 { page-break-after:avoid; }
+}
+
+
+
+@charset "UTF-8";
+
+			@font-face{
+			font-family:TrajanPro-Regular_0;
+			src:url('../font/TrajanPro-Regular_0.woff');
+			src:local(※), 
+				url('../font/TrajanPro-Regular_0.woff') format('woff');
+			}
+			
+
+			@font-face{
+			font-family:mangalb;
+			src:url('../font/mangalb.woff');
+			src:local(※), 
+				url('../font/mangalb.woff') format('woff');
+			}
+			
+			@font-face{
+			font-family:AdobeGothicStd-Bold;
+			src:url('../font/AdobeGothicStd-Bold.woff');
+			src:local(※), 
+				url('../font/AdobeGothicStd-Bold.woff') format('woff');
+			}
+			
+			@font-face{
+			font-family:NanumGothic;
+			src:url('../font/NanumGothic.woff');
+			src:local(※), 
+				url('../font/NanumGothic.woff') format('woff');
+			}
+			
+			@font-face{
+			font-family:MyriadBold_0;
+			src:url('MyriadBold_0.woff');
+			src:local(※), 
+				url('MyriadBold_0.woff') format('woff');
+			}
+			
+			@font-face{
+			font-family:impact_0;
+			src:url('impact_0.woff');
+			src:local(※), 
+				url('impact_0.woff') format('woff');
+			}
+
+
+
+body{
+		width:100%;
+		background:#f0f0f0;
+		border:0px solid red;
+		}
+#inner{
+		width:600px;
+		margin:0 auto;
+		border:0px solid red;
+		position:relative;
+		
+}		
+	
+					/*------------- 상단  -------------------------*/
+#header{
+		background:url(../images/common/infomenu_bg.png) repeat-x;	
+		width:100%;
+		}
+#inner #hot_keyword{
+		border:0px solid black;
+		float:left;
+		width:150px;
+		font-size:11px;
+		font-family:NanumGothic;
+		margin-top:7px;
+		letter-spacing:0.1em;
+		} 
+		
+#inner #hot_keyword ul li a {border:0px solid green;color:white; margin-left:10px;}
+#inner #hot_keyword ul li a:hover{color:#ccc;}
+#inner #hot_keyword ul li img{float:right; margin-top:2px;}
+#inner #hot_keyword ul {border:0px solid red;}
+#inner #hot_keyword ul li span {background:#ccc; border:0px solid cyan;margin-left:5px; display:inline-block;width:10px;padding-left:5px; font-weight:bold;}
+#inner #hot_keyword ul li span.last{background:#ccc; border:0px solid cyan;margin-left:5px; letter-spacing:-0.5px; width:15px; padding:0;}
+
+ #inner ul#infomenu{
+				border:0px solid orange;
+				text-align:right;	
+				padding-top:7px;
+				padding-bottom:0;
+				margin-right:88px;
+				
+}
+ #inner ul#infomenu li{
+				border:0px solid cyan;
+				display:inline-block;					
+				padding-left:14px;
+				
+}
+ #inner ul#infomenu li a {
+				color:#fff;	
+				font-family:NanumGothic;
+				font-weight:normal;
+				font-size:11px;
+}
+
+ #inner ul#infomenu li a:hover {
+				color:#ff0000;
+				text-decoration:underline;
+}
+
+#inner ul#infomenu li.last{
+				border:0px solid cyan;
+				position:absolute;
+				right:0;
+				top:-8px;
+				padding:0;
+				font-family:NanumGothic;
+				font-weight:normal;
+				font-size:11px;
+				text-align:left;
+				text-transform:capitalize;
+}
+		
+		
+		
+				/*-----------------로그인폼  -----------------*/
+	#content{
+		width:600px;
+		margin:0 auto;
+		border:0px solid red;
+		
+		}
+	#content h3.logo{
+		margin-top:37px;
+		margin-bottom:78px;
+		text-align:center;
+		}
+		
+	#content form .login fieldset input#logID, input#logPW{
+		width:100%;
+		height:57px;
+		display:block;
+		margin-bottom:18px;
+		font-family:NanumGothic;
+		font-size:14px;
+		color:#333;
+		padding: 0 20px;
+		box-sizing: border-box;
+		}
+	#content	form .login fieldset input#remember_id{
+		float:left;
+		
+		}
+	
+	
+
+	#content	form .login fieldset p.remember{
+			border:0px solid green;
+			margin-left:10px;
+			font-size:12px;
+			font-family:NanumGothic;
+			float:left;
+			
+	}
+	
+
+		
+	#content	form .login fieldset input#login_btn{
+			width:100%;
+			height:55px;
+			background:#cc0000;
+			margin-bottom:71px;
+			border:0px solid cyan;
+			margin-top:35px;
+	}
+	
+	#content form .login fieldset ul{
+			border:0px solid yellow;
+			margin-bottom:20px;
+			}
+	#content form .login fieldset ul li {
+			font-family:NanumGothic;
+			font-size:16px;
+			border:0px solid cyan;
+			display:inline;
+			
+		}
+	
+	
+	
+	#content form .login fieldset ul li.find{
+			margin-right:55px;
+			
+			}
+			
+
+	
+	#content	form .login fieldset input#find_id{
+			
+			margin-right:18px;
+}			
+	#content	form .login fieldset input#find_pw{
+			margin-right:59px;
+			}
+	a.joinbtn{background:url(../images/login/join.png) no-repeat; display:inline-block;width:112px;height:30px;}
+	a.joinbtn span{visibility:hidden}
+	
+													/*   notice  */
+	
+     
+#content #notice{
+			border:1px solid #666;
+			background:white;
+			margin-top:27px;
+			padding:20px;
+}
+	 
+	
+			
+#content #notice h4.img{
+			margin-bottom: 15px;
+			text-align: center;
+
+}
+
+
+
+#content #notice p{
+		font-family:Nanumgothic;
+		font-size:16px;
+		color:#666;
+		margin-top:20px;
+}
+#content #notice p span{
+		color:#ff0000;
+		border-bottom:1px solid red;
+}
+
+#content #notice h6 img{
+		border:0px solid red;
+		margin-left:466px;
+		margin-top:11px;
+		}
+		
+		
+		
+		#footer{
+				width:100%;
+				background:#333;
+				height:50px;
+		}
+		
+		#footer ul{
+				width:565px;
+				margin:102px auto 0;
+				padding-top:19px;
+				padding-left:35px;
+				border:0px solid red;
+		}
+		
+		#footer ul li{
+				display:inline;
+				border:0px solid cyan;
+				padding-right:70px;
+		}
+		
+		#footer ul li.last{
+				padding-right:0;
+		}
+		
+		#footer ul li:hover{ 
+				opacity:0.7;
+		}

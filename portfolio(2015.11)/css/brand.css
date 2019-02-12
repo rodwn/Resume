@@ -1,0 +1,359 @@
+html, button, input, select, textarea { color:#222; }
+body,h1,h2,h3,h4,h5,h6 { font-size:100%; line-height:1.2; font-family:'돋움', dotum, Helvetica, sans-serif; }
+
+textarea { resize:vertical; }
+.blind, legend, caption { display:block; overflow:hidden; position:absolute; top:0; left:-1000em; }
+i, em, address { font-style:normal; font-weight:normal; }
+
+.ir { background-color:transparent; border:0; overflow: hidden; *text-indent:-9999px; }
+.ir:before { content:""; display: block; width:0; height:150%; }
+
+.hidden { display:none !important; visibility:hidden; }
+.invisible { visibility:hidden; }
+
+.clearfix:before, .clearfix:after { content:" "; display:table; }
+.clearfix:after { clear:both; }
+
+.clearfix { *zoom:1; }
+
+@media only screen and (max-width:768px) {
+}
+
+@media print {
+  * { background:transparent !important; color:#000 !important; box-shadow:none !important; text-shadow:none !important; }
+  a { text-decoration: underline; }
+
+  .ir a:after,  a[href^="javascript:"]:after, a[href^="#"]:after { content:""; }
+  tr,  img { page-break-inside:avoid; }
+  img { max-width:100% !important; }
+
+  @page {
+    margin:0.5cm;
+  }
+  p,  h2,  h3 { orphans:3; widows:3; }
+  h2,  h3 { page-break-after:avoid; }
+}
+
+@charset "UTF-8";
+
+			
+			@font-face{
+			font-family:NanumGothic;
+			src:url('../font/NanumGothic.woff');
+			src:local(※), 
+				url('../font/NanumGothic.woff') format('woff');
+			}
+				
+			@font-face{
+			font-family:MyriadBold_0;
+			src:url('../font/MyriadBold_0.woff');
+			src:local(※), 
+				url('../font/MyriadBold_0.woff') format('woff');
+			}
+			
+			@font-face{
+			font-family:impact_0;
+			src:url('../font/impact_0.woff');
+			src:local(※), 
+				url('../font/impact_0.woff') format('woff');
+			}
+			
+			
+			
+			
+
+#content {
+			width:1000px;
+			height:1400px;
+			margin:0 auto;
+			background:url(../images/brand/bg.png) no-repeat 0 197px;
+			position:relative;
+}
+
+
+
+#content h2.title{
+			border:0px solid black;
+			padding-top:97px;
+			margin-bottom:20px;
+			}
+
+															/* path    */
+
+#content .path{
+			border:0px solid red;
+			float:left;			
+			margin-left:741px;
+}
+
+#content .path li {
+			float:left;
+			border:0px solid cyan;
+			margin-top:50px;
+			
+}
+#content .path li.home{
+			padding-right:20px;
+			background:url(../images/brand/path_arrow.png) no-repeat right 2px;
+			margin-right:11px;
+			font-size:12px;
+			text-transform:uppercase;
+			letter-spacing:1px;
+}
+
+#content .path li.home a{
+			color:#333;
+}
+
+#content .path li.brand{
+			padding-right:18px;
+			background:url(../images/brand/path_arrow.png) no-repeat right 2px;
+			margin-right:6px;
+			color:#333;
+			font-size:12px;
+			text-transform:uppercase;
+			letter-spacing:1px;
+}
+
+#content #select  {
+			border:0px solid purple;			
+			position:absolute;
+			right:0;
+			top:27px;
+			
+
+													/*  logo */
+}
+#content h3.logo{
+			padding-top:68px;
+			border:0px solid black;
+			float:left;
+}
+
+#content p.text{
+			border:0px solid green;
+			padding-top:68px;
+			padding-left:225px;
+			padding-right:25px;
+			font-family:NanumGothic;
+			font-size:15px;
+			
+			letter-spacing:0.08em;
+			color:#666;
+}		
+							/* -------------- brand story --------------- */
+		
+
+
+						/*   --------------내용  ---------------------*/
+#content #story{
+			margin-top:128px;
+			width:100%;
+			color:white;
+}
+
+		
+#content #story #container #since1960{
+			height:469px;
+			background:url(../images/brand/img1960.png) no-repeat 0 0;
+			border:0px solid green;
+			padding-top:199px;
+			padding-left:75px;
+}
+#content #story #container #since1970{
+			height:469px;
+			background:url(../images/brand/img1970.png) no-repeat 0 0;
+			border:0px solid green;
+			padding-top:199px;
+			padding-left:75px;
+}
+
+#content #story #container #since1980{
+			height:469px;
+			background:url(../images/brand/img1980.png) no-repeat 0 0;
+			border:0px solid green;
+			padding-top:199px;
+			padding-left:75px;
+}
+#content #story #container #since1990{
+			height:469px;
+			background:url(../images/brand/img1990.png) no-repeat 0 0;
+			border:0px solid green;
+			padding-top:199px;
+			padding-left:75px;
+}
+#content #story #container #since2000{
+			height:469px;
+			background:url(../images/brand/img2000.png) no-repeat 0 0;
+			border:0px solid green;
+			padding-top:199px;
+			padding-left:75px;
+}
+				/*  --------------1960   ---------------*/
+#content #story #container  p.brief {
+			font-family:NanumGothic;
+			font-weight:bold;
+			font-size:15px;
+			border:0px solid blue;
+			margin-bottom:50px;
+			letter-spacing:1px;
+			width:700px;
+			text-transform:capitalize;
+			
+}
+#content #story #container  ul.since{
+			border:0px solid red;
+			font-family:NanumGothic;
+			font-weight:bold;
+			font-size:11px;
+			border:0px solid green;
+			width:529px;
+			background:#333;
+			opacity:0.8;
+			padding:30px 35px;
+			letter-spacing:1px;
+			line-height:1.5;
+			text-transform:capitalize;
+}
+#content #story #container ul.since li{
+			margin-bottom:30px;
+			border:0px solid black;
+}
+#content #story #container ul.since li:last-child{
+			margin-bottom:0;
+}
+#content #story #container ul.since li span{
+			margin-left:53px;	
+}		
+
+					/* ---------------1970  --------------*/
+#content #story #container #since1970 p.brief {
+			margin-bottom:15px;		
+}
+#content #story #container #since1970 ul.since li{
+			margin-bottom:15px;
+}
+
+					/* ---------------1980,1990  --------------*/
+#content #story #container #since1980 p.brief, #since1990 p.brief {
+			margin-bottom:55px;		
+}
+
+							/*   -----------------탭 버튼-----------------------------*/
+#content #story #Navigation #primary{
+			margin-top:25px;
+			border:0px solid magenta;
+}
+
+#content #story #Navigation #primary li span{
+			visibility:hidden;
+}
+							
+#content #story #Navigation #primary li{
+			width:214px;
+			height:44px;
+			float:left;
+			position:relative;	
+}
+#content #story #Navigation #primary li a{
+			border:0px solid cyan;
+}
+
+#content #story #Navigation #primary li.btn1960 a{
+			display:inline-block;		
+			width:185px;
+			height:44px;			
+}
+
+#content #story #Navigation #primary li.btn1970 a, li.btn1980 a, li.btn1990 a{
+			display:inline-block;	
+			margin-left:25px;
+			width:160px;
+			height:44px;			
+}
+#content #story #Navigation #primary li.btn2000 a{
+			display:inline-block;		
+			margin-left:25px;
+			width:187px;
+			height:44px;			
+}
+
+
+
+
+#content #story #Navigation #primary li.btn1960{
+			background:url(../images/brand/navi_1960.png) no-repeat 0 0;
+			position:absolute;
+}
+		#content #story #Navigation #primary li.btn1960:hover{
+			background:url(../images/brand/navi_1960_ov.png) no-repeat 0 0;
+		}
+		#content #story #Navigation #primary li.btn1960 a.active{
+			background:url(../images/brand/active.png) no-repeat 82px 7px;
+		}
+		
+		
+		
+		
+
+#content #story #Navigation #primary li.btn1970{
+			background:url(../images/brand/navi_1970.png) no-repeat 0 0;
+			position:absolute;
+			left:196px;
+}
+		#content #story #Navigation #primary li.btn1970:hover{
+			background:url(../images/brand/navi_1970_ov.png) no-repeat 0 0;
+		}
+		#content #story #Navigation #primary li.btn1970 a.active{
+			background:url(../images/brand/active.png) no-repeat 57px 7px;
+		}
+		
+		
+		
+		
+		
+#content #story #Navigation #primary li.btn1980{
+			background:url(../images/brand/navi_1980.png) no-repeat 0 0;
+			position:absolute;
+			left:392px;
+}
+		#content #story #Navigation #primary li.btn1980:hover{
+			background:url(../images/brand/navi_1980_ov.png) no-repeat 0 0;
+		}
+		#content #story #Navigation #primary li.btn1980 a.active{
+			background:url(../images/brand/active.png) no-repeat 57px 7px;
+		}
+		
+		
+		
+		
+
+#content #story #Navigation #primary li.btn1990{
+			background:url(../images/brand/navi_1990.png) no-repeat 0 0;
+			position:absolute;
+			left:589px;
+}
+		#content #story #Navigation #primary li.btn1990:hover{
+			background:url(../images/brand/navi_1990_ov.png) no-repeat 0 0;
+		}
+		#content #story #Navigation #primary li.btn1990 a.active{
+			background:url(../images/brand/active.png) no-repeat 57px 7px;
+		}
+		
+		
+		
+
+#content #story #Navigation #primary li.btn2000{
+			background:url(../images/brand/navi_2000.png) no-repeat 0 0;
+			position:absolute;
+			right:0;
+}
+		#content #story #Navigation #primary li.btn2000:hover{
+			background:url(../images/brand/navi_2000_ov.png) no-repeat 0 0;
+		}
+		#content #story #Navigation #primary li.btn2000 a.active{
+			background:url(../images/brand/active.png) no-repeat 56px 7px;
+		}
+
+
+

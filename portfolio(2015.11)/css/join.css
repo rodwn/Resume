@@ -1,0 +1,245 @@
+html, button, input, select, textarea { color:#222; }
+body,h1,h2,h3,h4,h5,h6 { font-size:100%; line-height:1.2; font-family:'돋움', dotum, Helvetica, sans-serif; text-transform:uppercase; }
+
+textarea { resize:vertical; }
+.blind, legend, caption { display:block; overflow:hidden; position:absolute; top:0; left:-1000em; }
+i, em, address { font-style:normal; font-weight:normal; }
+
+.ir { background-color:transparent; border:0; overflow: hidden; *text-indent:-9999px; }
+.ir:before { content:""; display: block; width:0; height:150%; }
+
+.hidden { display:none !important; visibility:hidden; }
+.invisible { visibility:hidden; }
+
+.clearfix:before, .clearfix:after { content:" "; display:table; }
+.clearfix:after { clear:both; }
+
+.clearfix { *zoom:1; }
+
+@media only screen and (max-width:768px) {
+}
+
+@media print {
+  * { background:transparent !important; color:#000 !important; box-shadow:none !important; text-shadow:none !important; }
+  a { text-decoration: underline; }
+
+  .ir a:after,  a[href^="javascript:"]:after, a[href^="#"]:after { content:""; }
+  tr,  img { page-break-inside:avoid; }
+  img { max-width:100% !important; }
+
+  @page {
+    margin:0.5cm;
+  }
+  p,  h2,  h3 { orphans:3; widows:3; }
+  h2,  h3 { page-break-after:avoid; }
+}
+
+@charset "UTF-8";
+
+			@font-face{
+			font-family:NanumGothic;
+			src:url('../font/NanumGothic.woff');
+			src:local(※), 
+				url('../font/NanumGothic.woff') format('woff');
+			}
+			
+			@font-face{
+			font-family:MyriadBold_0;
+			src:url('../font/MyriadBold_0.woff');
+			src:local(※), 
+				url('../font/MyriadBold_0.woff') format('woff');
+			}
+			
+			@font-face{
+			font-family:impact_0;
+			src:url('../font/impact_0.woff');
+			src:local(※), 
+				url('../font/impact_0.woff') format('woff');
+			}
+			
+			@font-face{
+			font-family:axis;
+			src:url('../font/axis.woff');
+			src:local(※), 
+				url('../font/axis.woff') format('woff');
+			}
+			
+			
+			
+			
+
+#content {
+			width:1000px;
+			
+			margin:0 auto;
+			border:0px solid red;
+}
+#content h2.title{
+			padding-top:97px;
+			border:0px solid green;
+}
+
+#content p.step{
+			padding-top:21px;
+}
+
+#content h3.input{
+			padding-top:65px;
+			font-family:NanumGothic;
+			font-size:18px;
+			color:#333;
+			border:0px solid blue;
+}
+
+#content p.input_info{
+			font-size:12px;
+			color:#333;
+			border:0px solid orange;
+			padding-top:11px;
+}
+#content span{
+			color:#ff0000;
+}
+
+
+								/* ------------- input table -------------------*/
+								
+table	{
+			width:100%;
+			border:1px solid #999;
+			margin-top:17px;
+			font-size:12px;
+			color:#666;
+			margin-bottom:98px;
+		
+}
+
+
+table td{
+			border-bottom:1px solid #ccc;
+			height:38px;
+			vertical-align:middle;
+}
+
+table td:first-child{
+			padding-left:40px;		
+			width:135px;
+}
+
+table td:nth-child(2){
+			padding-left:8px;		
+}
+
+table td input#inputbox{
+			float:left;
+			margin-right:6px;
+}
+
+table td p.reduplication{
+			float:left;
+			padding-top:5px;
+}
+
+table td p.reduplication a{
+			border:0px solid cyan;
+			background:#333;
+			padding:6px 9px 4px;
+			color:white;
+}
+
+table td p.warn{
+			color:#ff0000;
+			padding-top:5px;
+			padding-left:15px;
+			border:0px solid cyan;
+			float:left;	
+}
+
+table td p.hyphen{
+			float:left;
+			padding-top:6px;
+			margin-right:6px;
+}
+
+table td p.at{
+			float:left;
+			padding-top:3px;
+			font-size:16px;
+			margin-right:6px;
+			
+}
+
+table td select{
+			font-size:12px;
+			color:#666;
+			height:22px;
+			border:1px solid #ccc;
+			margin-right:5px;
+}
+
+table td select.email{
+			width:100px;		
+}
+
+table td select.year{		
+			width:90px;
+}
+table td select.month, select.day{		
+			width:60px;
+}
+
+table td label{
+			border:0px solid red;
+			margin-top:5px;
+			float:left;
+			margin-left:10px;
+}
+table td p.select{
+			float:left;
+			border:0px solid red;
+}
+
+
+table td p.search{
+			
+			padding-top:5px;
+}
+
+table td p.search a{
+			border:0px solid cyan;
+			background:#333;
+			padding:6px 9px 4px;
+			color:white;
+}
+
+
+
+table tr:nth-child(10) td{
+			border-bottom:none;
+}
+
+
+table tr td p.agree_mail{
+			border:0px solid green;
+			float:left;
+			margin-top:5px;
+			margin-right:5px;
+			color:#333;		
+}
+table tr td p.agree_sms{
+			border:0px solid green;
+			float:left;
+			margin:5px 5px 0 63px;
+			color:#333;
+}
+
+table tfoot tr td{
+			padding-top:78px;
+			border:0px solid black;
+}
+table tfoot tr td p.confirm{
+			float:left;
+			margin-left:310px;
+			margin-right:20px;
+			margin-bottom:78px;
+			}

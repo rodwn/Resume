@@ -1,0 +1,4 @@
+﻿.select {color:white;font-size:12px; font-weight:bold;}
+	.select span {margin-left:4px;}
+	.select .selectitem:hover { background-color:#666; }
+	

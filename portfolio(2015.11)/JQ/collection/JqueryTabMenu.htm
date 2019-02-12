@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>collection</title>
+    <meta charset="euc-kr">
+    <script src="jquery-1.4.4.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+</head>
+<body>
+	
+<div id="wrapper">
+	 
+	<div id="Container">
+		<div id="Content">
+			<div id="TAB1">		
+				
+				<p class="brief">차가운 도시에서 비 걱정 없이 스타일은<br />물론 기능성까지 완벽하게<br /> 노스페이스 화이트라벨 트렌치 VX 코트</p>
+			
+				<dl class="coat">
+					<dd><img src="./img/collection_coat.png" /></dd>
+					<dt><a href="../../promotion.html" target="_blank">rainier trench vx coat</a></dt>
+					<dd class="numb"><a href="../../promotion.html" target="_blank">nyj2hg86</a></dd>
+				</dl>
+				
+				<dl class="jacket">
+					<dd><img src="./img/collection_jacket.png" /></dd>
+					<dt><a href="../../promotion.html" target="_blank">rainier trench jacket</a></dt>
+					<dd class="numb"><a href="../../promotion.html" target="_blank">nyj2hg56</a></dd>
+				</dl>
+			</div>
+			<div id="TAB2" style="display: none;">		
+			<a href="../../promotion.html" target="_blank"></a>
+			</div>
+			<div id="TAB3" style="display: none;">		
+			<a href="../../promotion.html" target="_blank"></a>	
+			</div>
+		</div>
+	</div>
+	
+	
+	<div id="Navigation">
+		<ul id="primary">
+			<li class="tab1"><a href="#" class="active"><span>TAB1</span><img src="./img/whitelabel.png" /></a></li>
+			<li class="tab2"><a href="#"><span>TAB2</span><img src="./img/bagcollection.png" /></a></li>
+			<li class="tab3"><a href="#"><span>TAB3</span><img src="./img/dynamichiking.png" /></a></li>
+		</ul>
+		
+	</div>
+
+</div>
+	
+<script>
+
+	$("#primary a").click(function(){
+			$("#primary a").removeClass("active");
+			$(this).addClass("active");
+			$("#Content div").css("display", "none");
+			var tabname = $(this).text();
+			tabname = tabname.replace(' ','');
+			$("#"+tabname).css("display","block");
+	 });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>imgPress - Interactive DHTML art-demos</title>
+<meta name="author" content="Gerard Ferrandez at http://www.dhteumeuleu.com">
+<meta charset="utf-8">		
+<meta http-equiv="imagetoolbar" content="no">
+<style type="text/css">
+	
+	@charset "UTF-8";
+
+			@font-face{
+			font-family:TrajanPro-Regular_0;
+			src:url('../../../font/TrajanPro-Regular_0.woff');
+			src:local(※), 
+				url('../../../font/TrajanPro-Regular_0.woff') format('woff');
+			}
+			@font-face{
+			font-family:NanumGothic;
+			src:url('../../../font/NanumGothic.woff');
+			src:local(※), 
+				url('../../../font/NanumGothic.woff') format('woff');
+			}
+	
+	
+	
+
+	#box {
+		position:absolute;
+		margin-left:-5%;
+		border: red solid 0px;
+		visibility: hidden;
+		width:100%;
+		
+		
+	}
+	#screen {
+		position: absolute;
+		left: 0;
+		width: 1000px;
+		top: 0;
+		height: 750px;
+		border: gray solid 0px;
+		
+		
+	}
+	#box img  {
+		position: absolute;
+		
+		border: gray solid 1px;
+		-ms-interpolation-mode:nearest-neighbor;
+		image-rendering: optimizeSpeed;
+		visibility: hidden;
+		background: #000;
+		
+	}
+	
+
+		
+	
+	
+	#box span {
+		position: absolute;
+		color: #333;
+		font-family: TrajanPro-Regular_0, NanumGothic;
+		font-size: 12px;
+		width: 200px;
+	}
+	
+	#lnk {
+		visibility: hidden;
+	}
+</style>
+<script type="text/javascript">
+// ====================================================
+// script: Gerard Ferrandez - Ge-1-doot - JANUARY 2005
+// http://www.dhteumeuleu.com/
+// Updated - January 23, 2010
+// ====================================================
+
+var imP = function () {
+	/* ---- private vars ---- */
+	var O = [],
+	    scr,
+	    box,
+	    img,
+	    txt,
+	    tit,
+	    W = 0,
+	    H = 0,
+	    nI = 0,
+	    sel = 0,
+	    si  = 0,
+	    ZOOM = 0,
+	    speed = .06, // animation speed
+	    delay = .5; // 1 = no delay
+
+	var dText = function() {
+		txt.style.textAlign = tit.style.textAlign = (sel<nI/2) ? "left" : "right";
+		txt.innerHTML = O[sel].tx;
+		tit.innerHTML = O[sel].ti;
+	}
+
+	var CObj = function (n, s, x, tx, ti) {
+		this.n     = n;
+		this.dim   = s;
+		this.tx    = tx;
+		this.ti    = ti;
+		this.is    = img[n];
+		this.iss   = this.is.style;
+		this.vz    = 0;
+		this.sx    = 0;
+		this.x0    = x;
+		this.x1    = 0;
+		this.zo    = 0;
+		this.rImg  = 1;
+		this.loaded = false;
+	}
+
+	CObj.prototype.over = function() {
+		if(this.n != sel){
+			O[sel].dim = 190 / O[sel].rImg;
+			O[this.n].dim = ZOOM * 73;
+			sel = this.n;
+			cLeft();
+			txt.innerHTML = tit.innerHTML = "";
+			setTimeout(dText, 32);
+		}
+	}
+
+	CObj.prototype.anim = function () {
+		if (this.loaded) {
+			this.vz  = speed * (this.vz + (this.x1 - this.sx) * delay);
+			this.x1 -= this.vz;
+			this.sx  = (this.n === 0) ? 0 : O[this.n - 1].x0 + O[this.n - 1].dim;
+			this.zo -= (this.zo - (this.dim * this.rImg)) * speed;
+			var l    = (this.x1 * si) + 6 * (this.n + 1);
+			var w    = this.zo * si;
+			this.iss.left   = Math.round(l) + 'px';
+			this.iss.top    = Math.round((H - w) * .5) + 'px';
+			this.iss.width  = Math.round(w / this.rImg) + 'px';
+			this.iss.height = Math.round(w) + 'px';
+			if(sel === this.n){
+				if(sel < nI * .5) {
+					tit.style.left = txt.style.left = Math.round(l + w / this.rImg + 6) + 'px';
+				} else {
+					tit.style.left = txt.style.left = Math.round(l - (nx * .25) - 6) + 'px';
+				}
+				txt.style.top = Math.round(-(w * this.rImg) * .15) + 'px';     
+				tit.style.top = Math.round((w * this.rImg) * .2) + 'px';     
+			}
+		} else {
+			if (this.is.complete) {
+				if (this.is.width) {
+					this.loaded = true;
+					this.rImg = this.is.height / this.is.width;
+					this.dim = (sel === this.n) ? ZOOM * 100 : 100 / this.rImg;
+					resize();
+					this.iss.width = "0px";
+					this.iss.visibility = "visible";
+				}
+			}
+		}
+	}
+
+	var cLeft = function() {
+		var l = 0;
+		for(var k = 0; k < nI; k++){
+			var o = O[k];
+			o.x0 = l;
+			l += o.dim;
+		}
+		return l;
+	}
+
+	var resize = function (){
+		nx = scr.offsetWidth;
+		ny = scr.offsetHeight;
+		W  =  nx * 90 / 100;
+		var l = cLeft();
+		si = (W - ((nI + 1) * 6)) / l;
+		H  = 100 * si + 14;
+		tit.style.width = Math.round(nx * .25) + 'px';
+		txt.style.width = Math.round(nx * .25) + 'px';
+		tit.style.fontSize = (nx / 15) + 'px';
+		txt.style.fontSize = (nx / 35) + 'px';
+		box.style.width  = Math.round(W) + 'px';
+		box.style.height = Math.round(H) + 'px';
+		box.style.left   = Math.round(nx / 2 - W / 2) + 'px';
+		box.style.top    = Math.round(ny / 2 - H / 2) + 'px';
+	}
+
+	////////////////////////////////////////////////////////////////////////////
+	var init = function () {
+		scr = document.getElementById("screen");
+		scr.onselectstart = new Function("return false");
+		box = document.getElementById("box");
+		tit = document.getElementById("tit");
+		txt = document.getElementById("txt");
+		img = box.getElementsByTagName("img");
+		Lnk = document.getElementById("lnk").getElementsByTagName("a");
+		nI  = img.length;
+		ZOOM = nI;
+		var s = ZOOM * 100;
+		var x = 0;
+		tit.innerHTML = img[0].title;
+		txt.innerHTML = img[0].alt;
+		for(var i=0; i<nI; i++) {
+			var t = img[i].alt;
+			if(Lnk[i].href!="") {
+				img[i].style.cursor = 'pointer';
+				t += '<br><a target="_blank" href="'+Lnk[i].href+'">'+Lnk[i].innerHTML+'</a>';
+			}
+			O[i] = new CObj(i, s, x, t, img[i].title);
+			img[i].alt = "";
+			img[i].title = "";
+			img[i].onmousedown = function() { return false; }
+			img[i].parent = O[i];
+			img[i].onmouseover = function() { this.parent.over(); }
+			if(Lnk[i].href!=""){
+				/* ==== hyperlink ==== */
+				img[i].onclick = new Function('window.open("'+Lnk[i].href+'","_blank");');
+			}
+			x += s;
+			s = 100;
+		}
+		resize();
+		onresize = resize;
+		box.style.visibility = "visible";
+		setInterval(function() {
+			for(var j in O) O[j].anim();
+		}, 16);
+	}
+	////////////////////////////////////////////////////////////////////////////
+	return {
+		init : init
+	}
+}();
+
+</script>
+</head>
+<body>
+<div id="screen">
+	<div id="box">
+		<img src="./images/img1.png" title="#style" alt="이연희가 소개하는 가을철 코디법 ">
+		<img src="./images/img2.png" title="#tough" alt="여심을 흔드는 상남자 스타일 연출법">
+		<img src="./images/img4.png" title="#cynical" alt="in north face white label 2015/2016 f / w photo shoot ">
+		<img src="./images/img9.png" title="#chic" alt="in north face white label 2015/2016 f / w photo shoot ">
+		<img src="./images/img5.png" title="#dandy" alt="in north face white label 2015/2016 f / w photo shoot ">
+		<img src="./images/img6.png" title="#trendy" alt="in north face white label 2015/2016 f / w photo shoot ">
+		<img src="./images/img8.png" title="#polish" alt="in north face white label 2015/2016 f / w photo shoot ">
+		
+		
+		<span id="txt"></span>
+		<span id="tit"></span>
+		<span id="lnk">
+			<a href="../../../index.html"></a>
+			<a href="../../../index.html"></a>
+			<a href="../../../index.html"></a>
+			<a href="../../../index.html"></a>
+			<a href="../../../index.html"></a>
+			<a href="../../../index.html"></a>
+			<a href="../../../index.html"></a>
+		</span>
+	</div>
+</div>
+
+<script type="text/javascript">
+/* ==== start script ==== */
+setTimeout(imP.init, 256);
+</script>
+
+</body>
+</html>

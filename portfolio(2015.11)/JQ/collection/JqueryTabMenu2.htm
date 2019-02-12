@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <title>brandstory</title>
+<style>
+
+</style>
+<script src="jquery-1.4.4.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/brand.css">
+
+
+</head>
+<body>
+	
+
+	
+	
+		<div id="Content">
+			<div id="since1960">		
+				 <p class="brief">노스페이스는 산의 가장 춥고 혹독한 ‘북면’을 따서 이름 붙여졌습니다.</br />
+			그러나 역설적으로 노스페이스의 전설은 미국 샌프란시스코의 north beach에서 시작되었습니다.<br /><br />
+
+			1966년 샌프란 시스코에서 첫 시작을 알린 노스페이스는 당초 작은 규모의 등산용품 소매점으로
+			시작했으나, 얼마 지나지 않아 발매한 침낭이 고객으로부터 큰 신뢰를 얻게 되면서 고기능 등산장비와
+			배낭 소매점인 ‘the north face’로 알려지게 되었습니다.<br />
+			1968년 the north face는 샌프란시스코의 반대편인 버클리(berkeley)지역으로옮겨갔고,
+			고유 브랜드를 가진 기능성 등산의류와 장비를 디자인하고 생산하기 시작했습니다.  </p>
+	     
+		<ul class="since">
+		   <li>1966년 -  샌프란시스코 북쪽 해변가 인근 지역에 작은 등산용품 가게를 오픈했습니다.<br />
+                  <span>이 곳은 60년대 히피음악과 대표그룹인‘the grateful dead’가 노래하던</span></br />
+                  <span>장소로도 유명한 곳입니다.</span></li>
+				  
+		  <li>1968년 -  노스페이스의 꿈이 시작된 해입니다. 샌프란시스코만 반대편인 버클리지역으로<br />
+                  <span>이전한 후 매장 뒤에서 몇 개의 봉제기계를 들여두고 제품을 만들기 시작했습니다.</span></br />
+                 <span> 세계 최초로 최저온도 규격을 표시한 슬리핑백을 출시했습니다.</span></li>
+				  
+		  <li>1969년 -  시에라 파카가 출시되어, 아웃도어 업계에서 유명해지기 시작했고, 지금까지<br />
+                  <span>다운제품의 고전으로 기억되고 있습니다.</span></li>
+		 
+		 </ul>
+				 
+			</div>
+			<div id="since1970" style="display: none;">		
+				 <h1>Tab Two</h1>
+				<p>
+					This is tab two. You can put specific information for tab one here.
+					This is tab two. You can put specific information for tab one here.
+					This is tab two. You can put specific information for tab one here.
+					This is tab two. You can put specific information for tab one here.
+					This is tab two. You can put specific information for tab one here.
+					This is tab two. You can put specific information for tab one here.
+					This is tab two. You can put specific information for tab one here.
+				</p>
+			</div>
+			<div id="since1980" style="display: none;">		
+				<h1>Tab Three</h1>
+				<p>
+					This is tab three. You can put specific information for tab one here.
+					This is tab three. You can put specific information for tab one here.
+					This is tab three. You can put specific information for tab one here.
+					This is tab three. You can put specific information for tab one here.
+					This is tab three. You can put specific information for tab one here.
+					This is tab three. You can put specific information for tab one here.
+					This is tab three. You can put specific information for tab one here.
+					This is tab three. You can put specific information for tab one here.
+					This is tab three. You can put specific information for tab one here.
+					This is tab three. You can put specific information for tab one here.
+					This is tab three. You can put specific information for tab one here.
+					This is tab three. You can put specific information for tab one here.
+					This is tab three. You can put specific information for tab one here.
+					This is tab three. You can put specific information for tab one here.
+					This is tab three. You can put specific information for tab one here.
+					This is tab three. You can put specific information for tab one here.
+					This is tab three. You can put specific information for tab one here.
+				</p>
+			</div>
+		</div>
+	
+
+	
+	<div id="Navigation">
+		<ul id="primary">
+			<li class="btn1960"><a href="#" class="active">since1960</a></li>
+			<li class="btn1970"><a href="#">since1970</a></li>
+			<li><a href="#">TAB 3</a></li>
+		</ul>
+	</div>
+	
+<script>
+
+	$("#primary a").click(function(){
+			$("#primary a").removeClass("active");
+			$(this).addClass("active");
+			$("#Content div").css("display", "none");
+			var tabname = $(this).text();
+			tabname = tabname.replace(' ','');
+			$("#"+tabname).css("display","block");
+	 });
+
+</script>
+
+</body>
+</html>

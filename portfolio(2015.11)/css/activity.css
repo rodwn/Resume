@@ -1,0 +1,366 @@
+html, button, input, select, textarea { color:#222; }
+body,h1,h2,h3,h4,h5,h6 { font-size:100%; line-height:1.2; font-family:'돋움', dotum, Helvetica, sans-serif; text-transform:uppercase; }
+
+textarea { resize:vertical; }
+.blind, legend, caption { display:block; overflow:hidden; position:absolute; top:0; left:-1000em; }
+i, em, address { font-style:normal; font-weight:normal; }
+
+.ir { background-color:transparent; border:0; overflow: hidden; *text-indent:-9999px; }
+.ir:before { content:""; display: block; width:0; height:150%; }
+
+.hidden { display:none !important; visibility:hidden; }
+.invisible { visibility:hidden; }
+
+.clearfix:before, .clearfix:after { content:" "; display:table; }
+.clearfix:after { clear:both; }
+
+.clearfix { *zoom:1; }
+
+@media only screen and (max-width:768px) {
+}
+
+@media print {
+  * { background:transparent !important; color:#000 !important; box-shadow:none !important; text-shadow:none !important; }
+  a { text-decoration: underline; }
+
+  .ir a:after,  a[href^="javascript:"]:after, a[href^="#"]:after { content:""; }
+  tr,  img { page-break-inside:avoid; }
+  img { max-width:100% !important; }
+
+  @page {
+    margin:0.5cm;
+  }
+  p,  h2,  h3 { orphans:3; widows:3; }
+  h2,  h3 { page-break-after:avoid; }
+}
+
+@charset "UTF-8";
+
+			@font-face{
+			font-family:NanumGothic;
+			src:url('../font/NanumGothic.woff');
+			src:local(※), 
+				url('../font/NanumGothic.woff') format('woff');
+			}
+			
+			@font-face{
+			font-family:MyriadBold_0;
+			src:url('../font/MyriadBold_0.woff');
+			src:local(※), 
+				url('../font/MyriadBold_0.woff') format('woff');
+			}
+			
+			@font-face{
+			font-family:impact_0;
+			src:url('../font/impact_0.woff');
+			src:local(※), 
+				url('../font/impact_0.woff') format('woff');
+			}
+			
+			@font-face{
+			font-family:axis;
+			src:url('../font/axis.woff');
+			src:local(※), 
+				url('../font/axis.woff') format('woff');
+			}
+			@font-face{
+			font-family:AdobeGothicStd-Bold;
+			src:url('../font/AdobeGothicStd-Bold.woff');
+			src:local(※), 
+				url('../font/AdobeGothicStd-Bold.woff') format('woff');
+			}
+			
+			
+			
+			
+
+#content {
+			width:1000px;
+			position:relative;
+			margin:0 auto;
+}
+
+#content h2.title{
+			border:0px solid black;
+			padding-top:97px;
+			margin-bottom:20px;
+			}
+
+															/* path    */
+
+#content .path{
+			border:0px solid red;
+			padding-top:6px;	
+			float:left;			
+			margin-left:735px;
+}
+
+#content .path li {
+			float:left;
+			border:0px solid cyan;
+			margin-top:42px;
+}
+#content .path li.home{
+			padding-right:20px;
+			background:url(../images/brand/path_arrow.png) no-repeat right 2px;
+			margin-right:11px;
+			font-size:12px;
+			text-transform:uppercase;
+			letter-spacing:1px;
+}
+
+#content .path li.home a{
+			color:#333;
+}
+
+#content .path li.activity{
+			padding-right:21px;
+			background:url(../images/brand/path_arrow.png) no-repeat right 2px;
+			margin-right:6px;
+			color:#333;
+			font-size:12px;
+			text-transform:uppercase;
+			letter-spacing:1px;
+}
+
+#content #select  {
+			border:0px solid purple;			
+			position:absolute;
+			right:0;
+			top:26px;
+}
+
+
+													/* 섹션1  */
+#content #section1 img{
+			margin-top:25px;
+			border:0px solid green;
+			margin-bottom:29px;
+}
+															/* 섹션2  */
+#content #section2{
+			border:0px solid gray;
+			height:191px;
+			
+			}
+
+
+#content #section2 h3.logo{
+			float:left;
+			border:0px solid red;	
+}
+#content #section2 p.text{
+			font-family:NanumGothic;
+			font-size:16px;
+			color:#666;
+			border:0px solid magenta;
+			float:left;
+			width:690px;
+			padding-left:50px;
+			padding-right:25px;
+			padding-top:10px;
+			letter-spacing:0.5px;	
+}
+																	/*  섹션 3*/
+
+#content #section3{
+			background:url(../images/activity/himalaya.png) no-repeat 0 0;
+			border:0px solid purple;
+			clear:both;
+			margin-top:51px;
+			height:625px;
+			width:100%;
+			position:relative;
+}
+
+#content #section3 h3.himalayan{
+			border:0px solid white;
+			font-family:impact_0;
+			font-size:30px;
+			font-weight:normal;
+			color:#660000;
+			
+			padding-top:104px;
+			padding-left:82px;
+			letter-spacing:3px;
+			line-height:1.1;
+}
+#content #section3 h3.himalayan span{
+			font-size:65px;
+			color:white;
+			font-family:impact_0;
+			
+}
+
+#content #section3 p{
+			border:0px solid green;
+}
+
+#content #section3 p.brief{
+			font-family:NanumGothic;
+			font-size:14px;
+			color:white;		
+			padding-top:55px;
+			padding-left:82px;
+		
+			}
+			
+#content #section3 p.desc1{
+			position:absolute;
+			right:328px;
+			top:130px;
+}
+
+#content #section3 p.desc2{
+			position:absolute;
+			right:16px;
+			top:110px;
+}
+
+#content #section3 p.desc3{
+			position:absolute;
+			right:158px;
+			bottom:37px;
+}
+
+#content #section3 p.btn{
+			padding-left:82px;
+			padding-top:60px;
+}
+
+
+							/*  ------------best item -------------------*/
+
+#content #section4 table{
+			border:0px solid magenta; 
+			width:100%;
+			margin-top:51px;
+			background:#333;
+			margin-bottom:78px;
+	}
+	
+#content #section4 table tr th{
+			border:0px solid green;
+			background:#ccc;
+		}
+#content #section4 table tr th.best{
+			text-align:left;
+			background:#333;
+			font-family:axis;
+			font-size:24px;
+			color:#fff;
+			padding:7px 0 5px 26px;
+		}
+		
+#content #section4 table tr th.title{
+			padding:31px 0 17px 26px;
+			text-align:left;
+		}		
+	#content #section4 table tr th.title2{
+			padding:16px 0 16px 26px;
+			text-align:left;
+
+	}			
+
+#content #section4 table tr td{
+			border:0px solid red;
+			height:340px;
+		}
+
+						/*	------------------상품 이미지-------------------*/
+						
+#content #section4 table tr td.first{		
+			width:240px;
+			background:url(../images/activity/item1.png) no-repeat right 50%;
+			padding:34px 0 34px 75px;
+}
+
+
+#content #section4 table tr td.second{
+			width:240px;
+			background:url(../images/activity/item2.png) no-repeat 50% 50%;
+			text-align:center;
+			padding:34px 65px;		
+}
+
+#content #section4 table tr td.third{
+			width:240px;
+			background:url(../images/activity/item3.png) no-repeat left 50%;
+			padding:34px 75px 34px 0;		
+}
+
+#content #section4 table tr td.fourth{		
+			width:240px;
+			background:url(../images/activity/item4.png) no-repeat right 50%;
+			padding:34px 0 34px 75px;
+}
+
+#content #section4 table tr td.fifth{
+			width:240px;
+			background:url(../images/activity/item5.png) no-repeat 50% 50%;
+			text-align:center;
+			padding:34px 65px;		
+}
+
+#content #section4 table tr td.sixth{
+			width:240px;
+			background:url(../images/activity/item6.png) no-repeat left 50%;
+			padding:34px 75px 34px 0;		
+}
+
+#content #section4 table tr td.seventh{		
+			width:240px;
+			background:url(../images/activity/item7.png) no-repeat right 50%;
+			padding:34px 0 34px 75px;
+}
+
+#content #section4 table tr td.eighth{
+			width:240px;
+			background:url(../images/activity/item8.png) no-repeat 50% 50%;
+			text-align:center;
+			padding:34px 65px;		
+}
+
+#content #section4 table tr td.nineth{
+			width:240px;
+			background:url(../images/activity/item9.png) no-repeat left 50%;
+			padding:34px 75px 34px 0;		
+}
+
+				/*  ---------------상품명-------------------*/
+
+
+
+
+#content #section4 table tr td a{
+			border:0px solid cyan;
+			display:inline-block;
+			width:240px;
+			margin-top:308px;
+			background:black;
+			color:white;
+			text-align:center;
+			font-family:MyriadBold_0;
+			font-size:14px;
+}
+
+
+
+#content #section4 table tr td a:hover{
+			background:white;
+			color:black;
+}
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
