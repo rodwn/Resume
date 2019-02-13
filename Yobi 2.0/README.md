@@ -226,7 +226,7 @@ global class를 선언한 class만 global scope문법 안에 넣어서 사용할
 
 크게 현재 컴포넌트가 속한 컴포넌트그룹을 기준으로 현재 컴포넌트 그룹에 속한 다른 컴포넌트를 불러오려면 내부 컴포넌트 불러오기, 다른 컴포넌트 그룹에 속한 컴포넌트를 불러오려면 외부 컴포넌트 불러오기 방법이 있다.
 
- - **내부 컴포넌트 불러오기**
+#### 내부 컴포넌트 불러오기
 내부 컴포넌트 불러오는 방법은 간단한 편이다. 위에 언급했듯이 불러오려는 컴포넌트의 이름과 경로를 import구문으로 작성 후 <컴포넌트명>...</컴포넌트명>으로 불러온다.
 
 
@@ -242,7 +242,7 @@ global class를 선언한 class만 global scope문법 안에 넣어서 사용할
         );
     }
 
- - **외부 컴포넌트 불러오기**
+#### 외부 컴포넌트 불러오기
 외부 컴포넌트를 불러오려면 우선 불러오려는 컴포넌트그룹폴더로 가서index.js(src폴더와 같은 위치)를 열고 import에는 해당컴포넌트명과 경로를, export에는 해당 컴포넌트명을 아래처럼 작성한뒤 저장을 해준다.(이미 되어있다면 패스한다.)
 
 
@@ -280,3 +280,73 @@ global class를 선언한 class만 global scope문법 안에 넣어서 사용할
         );
     }
 
+### 컴포넌트화
+
+해야 할 작업이 간단한 css작업이라면 필요없겠지만 새로운 UI가 추가될 때는 마크업 작업이 필요한데, 이 때 추가될 UI가 컴포넌트화가 필요할 정도라고 판단이 되면 컴포넌트화를 하고 마크업을 진행하면 된다. (사실 굳이 컴포넌트화를 하지 않고 마크업만 해도 어차피 개발작업을 할 때 보통 컴포넌트화를 하기때문에 필수는 아니다. 그래도 필자는 컴포넌트화를 하는편이지만 알고있어서 나쁠 것은 없을 듯 하다.)
+컴포넌트화 작업을 할 땐 그룹핑을 잘 고려해서 컴포넌트 성격에 맞는 컴포넌트그룹폴더에 추가해야한다.
+
+아래는 컴포넌트가 되기 위한 최소한의 구문이다. class 컴포넌트명과 최하단 export default 컴포넌트명과 jsx파일명이 일치해야 한다.
+
+    import React, {Component} from 'react';
+
+    class MyComponent extends Component {
+        render() {
+            return (
+                <div>
+                    {'hello world!'}
+                </div>
+            );
+        }
+    }
+
+    export default MyComponent;
+
+### 컴포넌트의 클래스
+
+A컴포넌트의 스타일을 유지한채 B컴포넌트에서만 A컴포넌트의 스타일을 수정해야 하는 경우가 있다. 알아둬야 할 점은 기본적으로 A컴포넌트의 내부에선 클래스를 주고 스타일을 지정할 순 있어도, 다른 B컴포넌트에서 A컴포넌트를 불러온 뒤 클래스를 주면 동작하지 않는다. 그렇다고 A컴포넌트의 css를 수정했다가는 A컴포넌트를 쓰고있는 다른 많은 컴포넌트에서도 같이 적용되기 때문에 함부로 수정할 수 없을 것이다. A컴포넌트의 css를 건들지 않고, 수정할 수 있는 방법을 무엇일까.
+global class 를 이용하면 쉽게 수정할 수 있다. A컴포넌트에 global class를 선언하고 B컴포넌트에서만 A컴포넌트의 global class를 selector로 잡고 수정하면 된다. 그러나 global class는 위에도 언급했듯이 제한적으로 써야하기 때문에 global class 대신 B컴포넌트에서 A컴포넌트에도 클래스를 지정해서 접근할 수 있는 방법을 소개한다.
+
+render 함수 위에 const props = this.props; 와 같이 props를 상수로 선언한다. 그 후 아래 클래스 선언 할 곳에 className={css.클래스명} 대신 className={props.className} 을 적어주면 B컴포넌트에서도 A컴포넌트에 클래스를 선언해서 스타일을 수정할 수 있다.
+
+    // A.jsx
+    import css from './css/A.css';
+    import React, {Component} from 'react';
+    ...
+
+    class A extends Component {
+    
+        const props = this.props;
+	
+        render() {
+            return (
+                <div className={props.className}>
+                    {'hello world!'}
+                </div>
+            );
+        }
+    }
+
+    export default A;
+
+
+    // B.jsx
+    import css from './css/B.css';
+    import A from './A.jsx';
+    import React, {Component} from 'react';
+
+    class B extends Component {
+
+        render() {
+            return (
+                <div>
+                    <A className={css.availableClass} />
+                </div>
+            );
+        }
+    }
+
+    export default B;
+    
+### 작업 시 컴포넌트 찾기
+
+실제로 작업을 하려면 작업할 부분이 어느 파일인지(컴포넌트인지) 찾기가 힘들 것 이다. 그러나 위 Setting에서 설명한 React Developer Tools를 설치한다면 쉽게 찾을 수 있다. 개발자도구를 열어 inspector로 찾고자 하는 곳을 선택하고 개발자도구 상단 탭메뉴에 React 탭을 클릭해보면 React DOM 구조를 확인할 수 있는데 inspector가 가리키는 곳의 컴포넌트가 선택되어있을 것이다. 해당 컴포넌트명으로 에디터에서 jsx파일을 검색 및 연 후에 작업을 진행하면 된다. 컴포넌트명이 아닌 html태그라면 조금 더 상위 구조로 올라가서 컴포넌트명이 나올 때 까지 찾은 후 똑같이 진행하면 된다.
