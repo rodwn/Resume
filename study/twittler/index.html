@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>twittler</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+	<script src="js/data.js"></script>
+</head>
+<body id="body">
+	<div class="header"><h1>twittler</h1></div>
+	<div class="content">
+		<div>
+			<button type="button" class="button_write_tweet waves-effect waves-light btn-small">Tweet</button>
+			<button type="button" class="button_back waves-effect waves-light btn-small" style="display:none">Back</button>
+		</div>
+		<ul class="list_comments"></ul>
+	</div>
+	<div class="dimmed">
+		<div class="tweet_layer">
+			<h2>새로운 tweet 작성</h2>
+			<form>
+				<textarea name="tweet" id="input_tweet" cols="30" rows="10" class="input_tweet"></textarea>
+				<button type="button" class="submit_tweet btn waves-effect waves-light">Submit</button>
+			</form>
+			<button type="button" class="button_close_layer">X</button>
+		</div>
+		<div class="timeline_layer">
+			<h2 id="title_selected_writer"></h2>
+			<ul class="list_comments on_sorting"></ul>
+			<button type="button" class="button_close_layer">X</button>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+</html>

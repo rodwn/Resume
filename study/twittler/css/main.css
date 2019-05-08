@@ -1,0 +1,178 @@
+.header {
+	margin-bottom: 20px;
+	padding: 15px;
+	border: 2px solid #ccc;
+	border-radius: 1em;
+	background-color: #eee;
+	color: white;
+	font-size: 2em;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-shadow: 0 0 5px #333;
+	text-align: center;
+}
+
+body {
+	padding: 40px; 
+}
+
+.list_comments {
+	margin-top: 20px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+}
+
+.comment {
+	display: table;
+	padding: 20px;
+	width: 100%;
+	table-layout: fixed;
+	box-sizing: border-box;
+}
+
+.comment:hover {
+	background-color: #eee;
+	color: #666;
+}
+
+.comment ~ .comment {
+	border-top: 1px solid #ccc;
+}
+
+.comment > div {
+	display: table-cell;
+	vertical-align: top;
+	word-break: break-all;
+	white-space: pre-wrap;
+}
+
+.comment > div:nth-child(2) {
+	width: 100px;
+	padding-left: 40px;
+	cursor: pointer;
+}
+
+.comment > div:nth-child(2):hover {
+	text-decoration: underline;
+}
+
+.on_sorting .comment > div:nth-child(2):hover {
+	text-decoration: none;
+}
+
+.comment > div:nth-child(3),
+.on_sorting .comment > div:last-child {
+	width: 180px;
+	padding-left: 20px;
+}
+
+.on_sorting .comment > div:last-child {
+	text-align: left;
+}
+
+.on_sorting .comment > div:nth-child(2) {
+	cursor: auto;
+}
+
+.comment > div:nth-child(3) > span{
+	font-size: 13px;
+	color: #666;
+}
+
+.comment > div:last-child {
+	width: 24px;
+	text-align: center;
+}
+
+.comment .material-icons {
+	display: block;
+	cursor: pointer;
+}
+
+.dimmed {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.7);
+	text-align: center;
+}
+
+.dimmed:after {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	content: '';
+}
+
+.dimmed.on_new_tweet,
+.dimmed.on_view_timeline {
+	display: block;
+}
+
+.tweet_layer {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	height: 200px;
+	margin: -100px 0 0 -250px;
+	padding: 20px;
+	background-color: #fff;
+	text-align: left;
+}
+
+.timeline_layer {
+	display: none;
+	position: relative;
+	width: 80%;
+	min-height: 300px;
+	padding: 20px;
+	background-color: #fff;
+	vertical-align: middle;
+	text-align: left;
+}
+
+.timeline_layer .list_comments {
+	overflow-y: auto;
+	max-height: 500px;
+}
+
+.on_new_tweet .tweet_layer,
+.on_view_timeline .timeline_layer {
+	display: inline-block;
+}
+
+.tweet_layer h2 {
+	margin-bottom: 10px;
+	font-size: 18px;
+	color: #000;
+}
+
+.input_tweet {
+	display: block;
+	width: 100%;
+	border-color: #ccc;
+	box-sizing: border-box;
+	resize: none;
+}
+
+.button_close_layer {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+
+}
+
+.material-icons {
+	font-size: inherit;
+}
+
+.submit_tweet {
+	float: right;
+	margin-top: 20px;
+}
