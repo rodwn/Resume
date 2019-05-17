@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Test</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo:100">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script>
+			$(document).ready(function() {
+            	$('.title-menu').focus(function() {
+            		$('.title-menu').children('.hide-txt').css('opacity', '1').next('.over').css('opacity', '0');
+            		$(this).children('.hide-txt').css('opacity', '0').next('.over').css('opacity', '1');
+        			$('.layer-depth2').css('display', 'none');
+        			$(this).next('.layer-depth2').css('display', 'block');
+            	});
+           //  	$('.layer-depth2 a').focus(function() {
+        			// $('.title-menu span').css('opacity', '1').next('.over').css('opacity', '0');
+        			// $(this).parents().siblings('.title-menu').children('.hide-txt').css('opacity', '0').next('.over').css('opacity', '1');
+           //  	});
+
+            	// $(".select-family-site").bind("click focus", function() {
+            	// 	if ($(this).hasClass('on')) {
+            	// 		$(this).removeClass('on').stop().next(".list-family-site").animate({height: '0px'});
+            	// 	} else {
+            	// 		$(this).addClass('on').stop().next(".list-family-site").animate({height: '176px'});
+            	// 	}
+            	// });
+
+            	$(".select-family-site").click(function() {
+            		if ($(this).hasClass('on')) {
+            			$(this).removeClass('on').next(".list-family-site").stop().animate({height: '0px'},300).css('bottom', '58px');
+            		} else {
+            			$(this).addClass('on').next(".list-family-site").stop().animate({height: '176px'}, 300).css('bottom', '59px');
+            		}
+            	});
+
+            	$(".entire > .title-menu").click(function() {
+					$(this).parents('body').css({'overflow': 'hidden', 'padding-right': '16px'});
+	     			$('#all-category, .full-dimmed').show();
+            	});
+
+            	$(".close-layer").click(function() {
+	     			$(this).parents('body').css({'overflow': 'visible', 'padding-right': '0'});
+	     			$('#all-category, .full-dimmed').hide();
+            	});
+
+       //      	$(".family-site a").focusin(function(){
+			    //     $(".list-family-site").stop().animate({height: '176px'});
+			    // });
+			    // $(".family-site a").focusout(function(){
+			    //     $(".list-family-site").stop().animate({height: '0px'});
+			    // });
+
+			    $('.fade').slick({
+				  dots: true,
+				  infinite: true,
+				  speed: 500,
+				  fade: true,
+				  cssEase: 'linear'
+				});
+            });
+    </script>
+</head>
+
+<body>
+<div class="skip-menu"><a href="#content">메뉴 건너뛰기</a></div>
+
+<div id="wrap">
+	<!-- 헤더 -->
+	<div id="header" class="header">
+		<div class="inner clear-fix">
+			<h1 class="logo">
+				<a href="index.html" title="홈으로"></a>
+			</h1>
+			<div class="group-header-content">
+			<span class="sr-only">사용자 간편메뉴</span>
+				<ul class="user-menu">
+					<li>
+						<a href="#">로그인</a>
+					</li>
+					<li>
+						<a href="#">회원가입</a>
+					</li>
+					<li>
+						<a href="#">주문, 배송조회</a>
+					</li>
+					<li>
+						<a href="#">위조상품 신고</a>
+					</li>
+				</ul>
+				<a href="#" class="btn-banner-fold" title="배너펼치기">
+					<span class="caret"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- //헤더 -->
+
+	<!-- 컨텐츠 -->
+	<div id="content" class="content">
+		<h2 class="sr-only">메인광고</h2>
+		<div class="slick-wrapper">
+			<ul class="fade">
+				<li>
+					<a href="#" title="감사편지 증정이벤트">
+					</a>
+				</li>
+				<li>
+					<a href="#" title="sadf">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="container">
+			<h2 class="sr-only">주 메뉴</h2>
+			<div class="gnb inner clear-fix">
+				<ul class="list-gnb-menu">
+					<li class="entire">
+						<a href="#all-category" class="title-menu"><i class="ico sp-hamburger"></i><span>전체메뉴</span></a>
+					</li>
+					<li class="video">
+						<a href="#" class="title-menu"><span class="hide-txt">성장동영상</span><span class="over"></span></a>
+						<div class="layer-depth2">
+							<div class="layer-wrap clear-fix">
+								<a href="#" class="img-area">
+									<span class="hide-txt">평생의 단 한번, 내 아이의 첫 생일을 위한 소중한 돌잔치를 봄티비 성장동영상으로 완벽하게 준비하세요.</span>
+								</a>
+								<ul class="list-depth2">
+									<li>
+										<a href="#">전체보기</a>
+									</li>
+									<li>
+										<a href="#">프리미엄 성장동영상</a>
+									</li>
+									<li>
+										<a href="#">Mix형 성장동영상</a>
+									</li>
+									<li>
+										<a href="#">심플 성장동여상</a>
+									</li>
+									<li>
+										<a href="#">관람예절 모음</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="smart">
+						<a href="#" class="title-menu"><span class="hide-txt">스마트/영상초대장</span><span class="over"></span></a>
+						<div class="layer-depth2">
+							<div class="layer-wrap clear-fix">
+								<a href="#" class="img-area">
+									<span class="hide-txt">봄티비 스마트초대장은 초대받는 사람도 즐겁게합니다</span>
+								</a>
+								<ul class="list-depth2">
+									<li>
+										<a href="#">스마트 초대장</a>
+									</li>
+									<li>
+										<a href="#">영상초대장</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="review">
+						<a href="#" class="title-menu"><span class="hide-txt">봄티비후기</span><span class="over"></span></a>
+						<div class="layer-depth2">
+							<div class="layer-wrap clear-fix">
+								<a href="#" class="img-area">
+									<span class="hide-txt">돌잔치를 성공적으로 마친 선배맘들의 솔직한 후기와 돌잔치에 대한 다양한 정보를 확인해보세요</span>
+								</a>
+								<ul class="list-depth2">
+									<li>
+										<a href="#">돌잔치 후기</a>
+									</li>
+									<li>
+										<a href="#">성장동영상 후기</a>
+									</li>
+									<li>
+										<a href="#">봄티비 스타후기</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="moms">
+						<a href="#" class="title-menu"><span class="hide-txt">맘스 돌준비</span><span class="over"></span></a>
+						<div class="layer-depth2">
+							<div class="layer-wrap clear-fix">
+								<a href="#" class="img-area">
+									<span class="hide-txt">돌잔치의 분위기에 맞춰 직접꾸밀수 있도록 봄티비에서는 다양한 정보 및 노하우를 전수합니다.</span>
+								</a>
+								<ul class="list-depth2">
+									<li>
+										<a href="#">돌잔치 무료자료실</a>
+									</li>
+									<li>
+										<a href="#">엄마표 소품강좌</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="event">
+						<a href="#" class="title-menu"><i class="ico sp-new-label"></i><span class="hide-txt">이벤트</span></a>
+					</li>
+				</ul>
+				<div class="gnb-menu-right">
+					<ul class="list-gnb-menu2">
+						<li class="cs-center">
+							<a href="#">고객센터</a>
+						</li><!--
+						--><li>
+							<a href="#">공지사항</a>
+						</li><!--
+						--><li>
+							<a href="#">시안확인</a>
+						</li>
+					</ul>
+					<a href="#" class="btn-search"><i class="ico sp-search">검색</i></a>
+				</div>
+			</div>
+
+			<h2 class="sr-only">인기 서비스</h2>
+			<div class="content-slider">
+				<div class="inner clear-fix">
+					<dl class="media-area">
+						<dt>
+							<span class="hide-txt">Media</span>
+						</dt>
+						<dd>
+							<a href="#" class="img-slide">
+								<img src="img/media.jpg" alt="미디어이미지">
+								<p class="img-txt">슬리피의 34번째 돌잔치</p>
+							</a>
+							<div class="paging">
+								<a href="#" role="button"><span class="ico sp-paging">1페이지</span></a>
+								<a href="#" role="button" class="on"><span class="ico sp-paging">2페이지</span></a>
+								<a href="#" role="button"><span class="ico sp-paging">3페이지</span></a>
+							</div>
+						</dd>
+					</dl>
+					<dl class="star-area">
+						<dt>
+							<span class="hide-txt">with star</span>
+						</dt>
+						<dd>
+							<a href="#" class="img-slide">
+								<img src="img/star.jpg" alt="스타이미지">
+								<p class="img-txt">탤런트 정태우</p>
+							</a>
+							<a href="#" class="more"><span class="ico sp-more">더보기</span></a>
+						</dd>
+					</dl>
+					<dl class="event-area">
+						<dt>
+							<span class="hide-txt">event</span>
+						</dt>
+						<dd>
+							<a href="#" class="img-slide">
+								<img src="img/event.png" alt="이벤트이미지">
+							</a>
+							<div class="paging">
+								<a href="#" role="button"><span class="ico sp-paging">1페이지</span></a>
+								<a href="#" role="button"><span class="ico sp-paging">2페이지</span></a>
+								<a href="#" role="button" class="on"><span class="ico sp-paging">3페이지</span></a>
+								<a href="#" role="button"><span class="ico sp-paging">4페이지</span></a>
+							</div>
+						</dd>
+					</dl>
+					<dl class="review-area">
+						<dt>
+							<em class="review-number">3,958</em><span class="hide-txt">건의 리얼후기</span>
+						</dt>
+						<dd>
+							<a href="#" class="img-slide">
+								<img src="img/review-img.png" alt="후기이미지">
+								<p class="img-txt clear-fix">돌잔치 후기 성장동영상 봄티비<em class="latest-date">17.06.14</em></p>
+							</a>
+							<a href="#" class="more"><span class="ico sp-more">더보기</span></a>
+						</dd>
+					</dl>
+				</div>
+			</div>
+
+			<h2 class="sr-only">공지 및 팁</h2>
+			<div class="notice-area">
+				<div class="inner">
+					<div class="notice-rolling">
+						<span class="hide-txt">공지</span>
+						<ul class="list-rolling">
+							<li><a href="#">다 똑같은 성장동영상?봄티비의 성장동영상은 다르다.</a></li>
+							<li style="display: none"><a href="#">다 똑같은 성장동영상?봄티비의 성장동영상은 다르다.</a></li>
+							<li style="display: none"><a href="#">다 똑같은 성장동영상?봄티비의 성장동영상은 다르다.</a></li>
+							<li style="display: none"><a href="#">다 똑같은 성장동영상?봄티비의 성장동영상은 다르다.</a></li>
+							<li style="display: none"><a href="#">다 똑같은 성장동영상?봄티비의 성장동영상은 다르다.</a></li>
+							<li style="display: none"><a href="#">다 똑같은 성장동영상?봄티비의 성장동영상은 다르다.</a></li>
+						</ul>
+					</div>
+					<div class="tip-hovering">
+						<a href="#" class="knowhow">
+							<p class="before-hover"><span class="tip-text">성장동영상<br>예쁘게 만들기<em>.</em></span></p>
+							<p><span class="tip-title">노하우</span></p>
+						</a>
+						<a href="#" class="honey-tip">
+							<p class="before-hover"><span class="tip-text">가격부담<br>줄이는 꿀팁<em>.</em></span></p>
+							<p><span class="tip-title">꿀팁</span></p>
+						</a>
+					</div>
+					<div class="fast-qna">
+						<a href="#" title="빠른제작문의"></a>
+					</div>
+				</div>
+			</div>
+
+			<h2 class="sr-only">성장동영상</h2>
+			<div class="growth-area inner">
+				<div class="tab-nav">
+					<div class="title-nav"><span class="hide-txt">추억이 감동으로, 성장동영상</span></div>
+					<ul class="list-tab">
+						<li><a href="#">인기순<i class="ico sp-arrow-right"></i></a></li>
+						<li><a href="#">신상품순<i class="ico sp-arrow-right"></i></a></li>
+						<li><a href="#">감동적인<i class="ico sp-arrow-right"></i></a></li>
+						<li><a href="#">Mix형<i class="ico sp-arrow-right"></i></a></li>
+						<li class="on"><a href="#">심플형<i class="ico sp-arrow-right"></i></a></li>
+					</ul>
+					<a href="#" class="btn-all-view"><span>성장동영상 전체보기</span><i class="caret right"></i></a>
+				</div>
+				<div class="nav-content">
+					<ul class="list-tab-slider">
+						<li class="tab-section">
+							<h3><span class="hide-txt">1</span></h3>
+							<a href="#1">
+								<div class="thumbnail-video">
+									<img src="img/growth-video.png" width="500" height="300" alt="성장동영상 썸네일">
+									<div class="thumbnail-dim"></div>
+								</div>
+								<dl class="desc-video">
+									<dt><span class="title-video"><em>심플</em>넌나의이상형<i class="ico sp-hd">HD</i></span></dt>
+									<dd><span class="running-time">04:12sec</span></dd>
+									<dd>
+										<p class="price"><em>165,000</em>won<span class="discount"><em>150,000</em>won</span></p>
+										<span class="ico sp-label best">베스트상품</span>
+									</dd>
+								</dl>
+							</a>
+							<div class="btn-group">
+								<a href="#2">주문하기</a>
+								<a href="#3">영상보기</a>
+							</div>
+						</li>
+						<li class="tab-section">
+							<h3><span class="hide-txt">1</span></h3>
+							<a href="#1">
+								<div class="thumbnail-video">
+									<img src="img/growth-video.png" width="500" height="300" alt="성장동영상 썸네일">
+									<div class="thumbnail-dim"></div>
+								</div>
+								<dl class="desc-video">
+									<dt><span class="title-video"><em>심플</em>넌나의이상형<i class="ico sp-hd">HD</i></span></dt>
+									<dd><span class="running-time">04:12sec</span></dd>
+									<dd>
+										<p class="price"><em>165,000</em>won</p>
+										<span class="ico sp-label best">베스트상품</span><span class="ico sp-label sale">세일</span>
+									</dd>
+								</dl>
+							</a>
+							<div class="btn-group">
+								<a href="#2">주문하기</a>
+								<a href="#3">영상보기</a>
+							</div>
+						</li>
+						<li class="tab-section">
+							<h3><span class="hide-txt">1</span></h3>
+							<a href="#1">
+								<div class="thumbnail-video">
+									<img src="img/growth-video.png" width="500" height="300" alt="성장동영상 썸네일">
+									<div class="thumbnail-dim"></div>
+								</div>
+								<dl class="desc-video">
+									<dt><span class="title-video"><em>심플</em>넌나의이상형<i class="ico sp-hd">HD</i></span></dt>
+									<dd><span class="running-time">04:12sec</span></dd>
+									<dd>
+										<p class="price"><em>165,000</em>won</p>
+										<span class="ico sp-label best">베스트상품</span><span class="ico sp-label new">신상</span>
+									</dd>
+								</dl>
+							</a>
+							<div class="btn-group">
+								<a href="#2">주문하기</a>
+								<a href="#3">영상보기</a>
+							</div>
+						</li>
+						<li class="tab-section">
+							<h3><span class="hide-txt">1</span></h3>
+							<a href="#1">
+								<div class="thumbnail-video">
+									<img src="img/growth-video.png" width="500" height="300" alt="성장동영상 썸네일">
+									<div class="thumbnail-dim"></div>
+								</div>
+								<dl class="desc-video">
+									<dt><span class="title-video"><em>심플</em>넌나의이상형<i class="ico sp-hd">HD</i></span></dt>
+									<dd><span class="running-time">04:12sec</span></dd>
+									<dd>
+										<p class="price"><em>165,000</em>won</p>
+										<span class="ico sp-label best">베스트상품</span>
+									</dd>
+								</dl>
+							</a>
+							<div class="btn-group">
+								<a href="#2">주문하기</a>
+								<a href="#3">영상보기</a>
+							</div>
+						</li>
+						<li class="tab-section">
+							<h3><span class="hide-txt">1</span></h3>
+							<a href="#1">
+								<div class="thumbnail-video">
+									<img src="img/growth-video.png" width="500" height="300" alt="성장동영상 썸네일">
+									<div class="thumbnail-dim"></div>
+								</div>
+								<dl class="desc-video">
+									<dt><span class="title-video"><em>심플</em>넌나의이상형<i class="ico sp-hd">HD</i></span></dt>
+									<dd><span class="running-time">04:12sec</span></dd>
+									<dd>
+										<p class="price"><em>165,000</em>won</p>
+										<span class="ico sp-label best">베스트상품</span>
+									</dd>
+								</dl>
+							</a>
+							<div class="btn-group">
+								<a href="#2">주문하기</a>
+								<a href="#3">영상보기</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<h2 class="sr-only">이벤트 및 유저참여공간</h2>
+			<div class="latest-news-area">
+				<div class="inner">
+					<h3 class="sr-only">진행중인 이벤트</h3>
+					<div class="progressing-event">
+						<ul class="event-slider">
+							<li>
+								<a href="#"><img src="img/news/event-slider.png" alt="후기를 남겨주시면 2만원 돌려드립니다."></a>
+							</li>
+							<li style="display: none">
+								<a href="#"><img src="img/news/event-slider2.jpg" alt="돌잔치영상 무료로 만들고 성장동영상 1만원 할인받으세요."></a>
+							</li>
+						</ul>
+						<div class="hovering-paging">
+							<span class="active">이벤트 1</span>
+							<span>이벤트 2</span>
+						</div>
+					</div>
+					<h3 class="sr-only">유저참여공간</h3>
+					<div class="ucc-event clear-fix">
+						<div class="section first">
+							<div class="fade-area">
+								<ul class="list-fade">
+									<li class="fade-item">
+										<h4 class="section-title">돌잔치성장동영상</h4>
+										<a href="#" class="thumbnail-video hide-txt">
+											돌잔치동영상이미지
+											<div class="thumbnail-dim"></div>
+										</a>
+										<dl class="desc-video">
+											<dt>
+												<strong class="party-review ellipsis">돌잔치후기</strong>
+												<span class="total">총 3,963개</span>
+												<a href="#" class="btn-search"><i class="ico sp-search-sm">검색버튼</i></a>
+											</dt>
+											<dd>
+												<p class="desc-txt">
+													<a href="#">행사장-LG게스트하우스분주하지 않고 조용하고 심플한 분위기속에 순조롭게 돌잔치 치룰 수 있었던 LG게스트하우스 가족분들 지인분들도 헤매지 않고............</a>
+												</p>
+												<span class="write-date">17.05.19 / 이차 *</span>
+											</dd>
+										</dl>
+									</li>
+									<li class="fade-item" style="display: none">
+										<h4 class="section-title">돌잔치성장동영상</h4>
+										<a href="#" class="thumbnail-video hide-txt">
+											돌잔치동영상이미지
+											<div class="thumbnail-dim"></div>
+										</a>
+										<dl class="desc-video">
+											<dt>
+												<strong class="party-review ellipsis">돌잔치후기</strong>
+												<span class="total">총 3,963개</span>
+												<a href="#" class="btn-search"><i class="ico sp-search-sm">검색버튼</i></a>
+											</dt>
+											<dd>
+												<p class="desc-txt">
+													<a href="#">행사장-LG게스트하우스분주하지 않고 조용하고 심플한 분위기속에 순조롭게 돌잔치 치룰 수 있었던 LG게스트하우스 가족분들 지인분들도 헤매지 않고............</a>
+												</p>
+												<span class="write-date">17.05.19 / 이차 *</span>
+											</dd>
+										</dl>
+									</li>
+								</ul>
+								<div class="fade-nav">
+									<button type="button" class="fade-prev"><span class="caret left">이전</span></button>
+									<button type="button" class="fade-next disable"><span class="caret right">다음</span></button>
+								</div>
+							</div>
+							<div class="rec-banner-area">
+								<a href="#"><img src="img/news/rec.png" alt="배너이미지"></a>
+							</div>
+						</div>
+						<div class="section">
+							<div class="monthly-purchase">
+								<div class="fade-area">
+									<ul class="list-fade">
+										<li class="fade-item">
+											<a href="#"><img src="img/news/purchase-king.jpg" alt="이달의 공구왕"></a>
+										</li>
+										<li class="fade-item" style="display: none">
+											<a href="#"><img src="img/news/purchase-king.jpg" alt="이달의 공구왕"></a>
+										</li>
+									</ul>
+									<div class="fade-nav">
+										<button type="button" class="fade-prev"><span class="caret left">이전</span></button>
+										<button type="button" class="fade-next disable"><span class="caret right">다음</span></button>
+									</div>
+								</div>
+							</div>
+							<div class="group-purchase-event">
+								<span class="bg-purchase-event hide-txt">모이면 모일수록 가격이 착해지는 공구이벤트</span>
+								<div class="btn-group">
+									<a href="#">
+										공구혜택 보기<span class="caret right"></span>
+									</a>
+									<a href="#">
+										공구장 신청하기<span class="caret right"></span>
+									</a>
+								</div>
+								<div class="thumbnail-dim"></div>
+							</div>
+						</div>
+						<div class="section last">
+							<div class="invitation">
+								<a href="#">
+									<span class="bg-txt-invitation hide-txt">쓸데없이 고 퀄리티! 받는사람 뿅가게 만드는 스마트 초대장</span>
+									<span class="bg-invitation"></span>
+									<div class="thumbnail-dim"></div>
+								</a>
+							</div>
+							<div class="service-faq">
+								<span class="bg-faq hide-txt">급하다고 아무데나 맡기지마세요 성장동영상 급할땐 999-9999</span>
+								<div class="btn-group">
+									<a href="#">
+										서비스 문의하기
+										<span class="caret right"></span>
+									</a>
+								</div>
+								<div class="thumbnail-dim"></div>
+							</div>
+						</div>
+					</div>
+					<div class="banner-sponsor">
+						<a href="#"><img src="img/news/banner-sponsor.jpg" alt="션,정혜영부부가 후원하는 홀트아동복지회에 봄티비도 함께 후원합니다."></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="with-star inner">
+				<h2 class="title-area">
+					<a href="#"><img src="img/star/star-title.png" alt="스타와 함께!"></a>
+				</h2>
+				<div class="page-area">
+					<ul class="list-star-profile">
+						<li class="star-profile">
+							<a href="#">
+								<div class="thumbnail-profile">
+									<img src="img/star/hyungbin.jpg" alt="윤형빈 프로필 사진">
+									<span class="frame-circle"></span>
+									<div class="thumbnail-dim"></div>
+								</div>
+								<div class="text-profile">
+									<span class="name">개그맨 윤형빈</span>
+									<span class="work">개그콘서트</span>
+									<div class="reg-date">2016.07</div>
+								</div>
+							</a>
+						</li>
+						<li class="star-profile">
+							<a href="#">
+								<div class="thumbnail-profile">
+									<img src="img/star/kimsong.jpg" alt="강원래와김송 프로필 사진">
+									<span class="frame-circle"></span>
+									<div class="thumbnail-dim"></div>
+								</div>
+								<div class="text-profile">
+									<span class="name">강원래&amp;김송</span>
+									<span class="work">엄마의 탄생</span>
+									<div class="reg-date">2016.07</div>
+								</div>
+							</a>
+						</li>
+						<li class="star-profile">
+							<a href="#">
+								<div class="thumbnail-profile">
+									<img src="img/star/youngnam.jpg" alt="영화배우 장영남 프로필 사진">
+									<span class="frame-circle"></span>
+									<div class="thumbnail-dim"></div>
+								</div>
+								<div class="text-profile">
+									<span class="name">영화배우 장영남</span>
+									<span class="work">해어화,화려한 유혹</span>
+									<div class="reg-date">2016.07</div>
+								</div>
+							</a>
+						</li>
+						<li class="star-profile">
+							<a href="#">
+								<div class="thumbnail-profile">
+									<img src="img/star/woojin.jpg" alt="개그맨 노우진 프로필 사진">
+									<span class="frame-circle"></span>
+									<div class="thumbnail-dim"></div>
+								</div>
+								<div class="text-profile">
+									<span class="name">개그맨 노우진</span>
+									<div class="reg-date">2016.07</div>
+								</div>
+							</a>
+						</li>
+						<li class="star-profile">
+							<a href="#">
+								<div class="thumbnail-profile">
+									<img src="img/star/taeho.jpg" alt="개그맨 정태호 프로필 사진">
+									<span class="frame-circle"></span>
+									<div class="thumbnail-dim"></div>
+								</div>
+								<div class="text-profile">
+									<span class="name">개그맨 정태호</span>
+									<span class="work">수방사,개그콘서트</span>
+									<div class="reg-date">2016.07</div>
+								</div>
+							</a>
+						</li>
+						<li class="star-profile">
+							<a href="#">
+								<div class="thumbnail-profile">
+									<img src="img/star/youngjoon.jpg" alt="가수 고영준 프로필 사진">
+									<span class="frame-circle"></span>
+									<div class="thumbnail-dim"></div>
+								</div>
+								<div class="text-profile">
+									<span class="name">가수 고영준</span>
+									<span class="work">브라운 아이드 소울</span>
+									<div class="reg-date">2016.07</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul class="page-nav">
+						<li>
+							<a href="#"><span class="hide-txt">1페이지</span></a>
+						</li>
+						<li class="on">
+							<a href="#"><span class="hide-txt">2페이지</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<h2 class="sr-only">스타인터뷰영상</h2>
+			<div class="interview-area">
+				<a href="#">
+					<div class="title-video">
+						<strong>봄티비는 누구보다 엄마의 마음을 잘 알아요.</strong>
+						<span>스타들의 후기 인터뷰영상</span>
+						<span class="play"><i class="caret right hide-txt">시청하기</i></span>
+					</div>
+					<div class="thumbnail-dim"></div>
+				</a>
+			</div>
+
+			<h2 class="sr-only">고객센터 및 FAQ</h2>
+			<div class="customer-area inner clear-fix">
+				<div class="cs-center">
+					<h3 class="hide-txt">고객센터</h3>
+					<p class="tel">1577-7311</p>
+					<dl>
+						<dt class="sr-only">고객센터 영업시간</dt>
+						<dd>
+							<ul class="list-manage-time">
+								<li><strong>평일</strong><span>09:30 am - 05:00 pm</span></li>
+								<li><strong>점심시간</strong><span>12:30 pm - 01:30 pm</span></li>
+								<li><strong>토요일</strong><span>10:00 am - 02:00 pm</span></li>
+								<li><strong>일요일 및 공휴일 휴무.</strong></li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<div class="link-faq">
+					<h3 class="sr-only">FAQ</h3>
+					<div class="btn-area">
+						<a href="#">질문과 답변<span class="caret right"></span></a>
+						<a href="#">자주묻는 질문<span class="caret right"></span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //컨텐츠 -->
+
+	<!-- 푸터 -->
+	<div id="footer" class="footer">
+		<div class="footer-menu">
+			<div class="inner">
+				<h2 class="sr-only">회사소개 및 약관</h2>
+				<ul class="list-foot-menu">
+					<li><a href="#">회사소개</a></li>
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">개인정보처리방침</a></li>
+					<li><a href="#">이메일무단수집거부</a></li>
+					<li><a href="#">인재채용</a></li>
+				</ul>
+			 	<h2 class="sr-only">SNS 서비스바로가기</h2>
+			 	<a href="#4" class="social-network">
+		 			<span class="hide-txt">인스타그램</span>
+		 			<span class="over"></span>
+			 	</a>
+			 	<h2 class="sr-only">봄티비 자매 사이트</h2>
+			 	<div class="family-site">
+				 	<a href="#9" class="select-family-site">
+				 		<span>Family site</span>
+				 		<i class="caret"></i>
+			 		</a>
+			 		<ul class="list-family-site">
+			 			<li>
+			 				<a href="http://bomtvcard.com/" target="_blank">
+			 					<i class="site-logo card"></i><span>봄티비카드</span>
+		 					</a>
+		 				</li>
+		 				<li>
+			 				<a href="http://www.bomtvbiz.com/" target="_blank">
+			 					<i class="site-logo biz"></i><span>봄티비비즈</span>
+		 					</a>
+		 				</li>
+		 				<li>
+			 				<a href="#">
+			 					<i class="site-logo living"></i><span>봄티비리빙</span>
+		 					</a>
+		 				</li>
+			 		</ul>
+			 	</div>
+		 	</div>
+		</div>
+		<h2 class="sr-only">봄티비 정보</h2>
+		<div class="company-info-area inner">
+			<div class="company-info">
+				<span class=foot-logo></span>
+				<strong class="ceo">(주)봄티비커뮤니케이션 대표이사 정경주</strong>
+				<p class="info-txt">주소: 서울시 서초구 강남대로 123 (양재동) 환승빌딩 123호</p>
+				<p class="info-txt">통산판매번호 : 제1231-서울서초-1231 <span>사업자등록번호 : 123-12-12312</span><span>대표전화 : 1234-1231</span></p>
+				<p class="info-txt">팩스번호 : 12-1234-1234<span>개인정보책임자 : 박여진 (yeo3@hanmail.net)</span></p>
+			</div>
+		</div>
+		<div class="sponsor">
+			<h3 class="sr-only">스폰서협회사이트바로가기</h3>
+			<div class="inner">
+				<a href="https://www.komca.or.kr" target="_blank" title="한국 음악 저작권 협회" class="komca"></a>
+				<a href="http://www.fkmp.kr/" target="_blank" title="한국 음악실연자 연합회" class="fkmp"></a>
+				<a href="http://www.riak.or.kr/" target="_blank" title="한국 음반 산업 협회" class="riak"></a>
+				<a href="https://www.copyright.or.kr" target="_blank" title="한국 저작권 위원회" class="copyright"></a>
+			</div>
+		</div>
+		<div class="footer-notice">
+			<div class="inner">
+				<i class="logo"></i>
+				<p class="notice-txt">안전거래를 위해 (주)LG U+의 구매안전(에스크로)에 가입하여 서비스를 제공하고 있습니다</p>
+			</div>
+		</div>
+	</div>
+	<!-- //푸터 -->
+</div>
+
+<!-- 전체 메뉴 보기 레이어 -->
+<div id="all-category" class="layer-all-menu">
+	<div class="inner">
+	<ul class="list-all-menu clear-fix">
+		<li>
+			<strong class="title-category">GROWH<br>MOVIE</strong>
+			<ul class="list-sub-all-menu">
+				<li><a href="#">전체보기</a></li>
+				<li><a href="#">프리미엄 성장동영상<i class="ico new-post">최근 게시물 등록</i></a></li>
+				<li><a href="#">Mix형 성장동영상</a></li>
+				<li><a href="#">심플 성장동영상</a></li>
+				<li><a href="#">관람예절 모음</a></li>
+			</ul>
+		</li>
+		<li>
+			<strong class="title-category">SMART<br>INVITATION</strong>
+			<ul class="list-sub-all-menu">
+				<li><a href="#">스마트초대장</a></li>
+				<li><a href="#">영상초대장</a></li>
+			</ul>
+		</li>
+		<li>
+			<strong class="title-category">REVIEW</strong>
+			<ul class="list-sub-all-menu">
+				<li><a href="#">성장동영상 후기</a></li>
+				<li><a href="#">봄티비 스타후기</a></li>
+			</ul>
+		</li>
+		<li>
+			<strong class="title-category">MAM'S<br>1STPARTY</strong>
+			<ul class="list-sub-all-menu">
+				<li><a href="#">돌잔치 무료자료실</a></li>
+				<li><a href="#">엄마표 소품강좌</a></li>
+			</ul>
+		</li>
+		<li>
+			<strong class="title-category">EVENT</strong>
+			<ul class="list-sub-all-menu">
+				<li><a href="#">진행중인 이벤트<i class="ico new-post">최근 게시물 등록</i></a></li>
+				<li><a href="#">마감된 이벤트</a></li>
+				<li><a href="#">당첨자 발표</a></li>
+			</ul>
+		</li>
+		<li>
+			<strong class="title-category">CUSTOMER<br>SERVICE</strong>
+			<ul class="list-sub-all-menu">
+				<li><a href="#">질문과 답변</a></li>
+				<li><a href="#">공지사항</a></li>
+				<li><a href="#">주문방법</a></li>
+				<li><a href="#">자주묻는 질문</a></li>
+			</ul>
+		</li>
+	</ul>
+	</div>
+	<button type="button" class="close-layer"><i class="ico close-lg">닫기</i></button>
+</div>
+<div class="full-dimmed"></div>
+<!-- //전체 메뉴 보기 레이어 -->
+</body>
+</html>
